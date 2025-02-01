@@ -4,6 +4,7 @@
 
 - [📌 Introduction](#-introduction)
 - [🚀 Features](#-features)
+- [⚙️ Vole Machine Language Instruction Set](#️-vole-machine-language-instruction-set)
 - [🖼️ Screenshots](#-screenshots)
 - [🛠️ Getting Started](#-getting-started)
   - [📋 Prerequisites](#-prerequisites)
@@ -29,6 +30,23 @@ The Vole Machine Language Simulator GUI is a graphical application designed to s
 - **Manual Instruction Input**: Option to manually add, decode, and execute instructions without fetching from memory.
 - **User Interface**: Intuitive Qt-based GUI with a dedicated 'How to Use' window for user guidance.
 - **Cross-Platform Compatibility**: Runs on Windows, macOS, and Linux.
+
+## ⚙️ Vole Machine Language Instruction Set
+| **Opcode** | **Format** | **Description** |
+|--------|--------|-------------|
+| 1      | RXY    | **LOAD** the register R with the bit pattern found in the memory cell whose address is XY. |
+| 2      | RXY    | **LOAD** the register R with the bit pattern XY. |
+| 3      | RXY    | **STORE** the bit pattern found in register R in the memory cell whose address is XY. |
+| 4      | 0RS    | **MOVE** the bit pattern found in register R to register S. |
+| 5      | RST    | **ADD** the bit patterns in registers S and T as though they were **two’s complement representations** and leave the result in register R. |
+| 6      | RST    | **ADD** the bit patterns in registers S and T as though they **represented values in floating-point notation** and leave the floating-point result in register R. |
+| 7      | RST    | **OR** the bit patterns in registers S and T and place the result in register R. |
+| 8      | RST    | **AND** the bit patterns in registers S and T and place the result in register R. |
+| 9      | RST    | **EXCLUSIVE OR** the bit patterns in registers S and T and place the result in register R. |
+| A      | R0X    | **ROTATE** the bit pattern in register R one bit to the right X times. Each time place the bit that started at the low-order end at the high-order end. |
+| B      | RXY    | **JUMP** to the location in the memory cell at address XY if the bit pattern in register R is equal to the bit pattern in register number 0. Otherwise, continue with the normal sequence of execution. |
+| C      | 000    | **HALT** execution. |
+| D      | RXY    | **JUMP** to instruction in RAM cell XY if the content of register R is greater than (>) the content of register 0. Data is interpreted as integers in two's complement notation. |
 
 ## 🖼️ Screenshots
 
@@ -70,7 +88,7 @@ The Vole Machine Language Simulator GUI is a graphical application designed to s
 
 ### 📥 Download the Latest Release
 
-Get the latest version of **Vole Machine Language Simulator GUI**: [Download Here](https://github.com/esraa-emary/Vole-Machine-Language-Simulator-GUI/releases/latest) <br>
+- Get the latest version of **Vole Machine Language Simulator GUI**: [Download Here](https://github.com/esraa-emary/Vole-Machine-Language-Simulator-GUI/releases/latest) <br>
 Visit the release page to download the precompiled binaries for your system. Extract the downloaded file and run the executable to start using the simulator!
 
 ## 📌 Usage
