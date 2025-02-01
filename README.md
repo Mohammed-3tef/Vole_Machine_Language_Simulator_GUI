@@ -14,6 +14,7 @@
 - [🤝 Contributing](#-contributing)
 - [🌟 Acknowledgments](#-acknowledgments)
 - [🖥️ Console Version](#️-console-version)
+- [✍️ Authors](#️-authors)
 - [📜 License](#-license)
 
 ## 📌 Introduction
@@ -32,9 +33,7 @@ The Vole Machine Language Simulator GUI is a graphical application designed to s
 ## 🖼️ Screenshots
 
 
-
 ## 🛠️ Getting Started
-
 ### 📋 Prerequisites
 
 - **Qt Framework**: Ensure that Qt (version 5 or later) is installed on your system.
@@ -107,6 +106,12 @@ We would like to thank our professor, Dr. Mohamed El-Ramly, for his guidance and
 ## 🖥️ Console Version
 
 Prefer the classic console-based experience? Check out the **Vole Machine Simulator Console Version**: [Console Version Repository](https://github.com/esraa-emary/Vole-Machine-Language-Simulator)
+
+## ✍️ Authors
+
+- **Esraa Emary Abd El-Salam**: [GitHub](https://github.com/esraa-emary) - [LinkedIn](https://www.linkedin.com/in/esraa-emary-b372b8303/)
+- **Mohammed Atef Abd El-Kader**: [GitHub](https://github.com/Mohammed-3tef) - [LinkedIn](https://www.linkedin.com/in/mohammed-atef-b0a408299/)
+
 
 ## 📜 License
 
