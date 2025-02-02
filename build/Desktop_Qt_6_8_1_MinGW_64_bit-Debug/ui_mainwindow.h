@@ -341,7 +341,7 @@ public:
     QFrame *frame_10;
     QGridLayout *gridLayout_12;
     QLabel *label_3;
-    QTextEdit *textEdit;
+    QTextEdit *inputInstructions;
     QFrame *frame_8;
     QGridLayout *gridLayout_13;
     QLabel *label_7;
@@ -2124,14 +2124,14 @@ public:
 
         gridLayout_12->addWidget(label_3, 0, 0, 1, 1);
 
-        textEdit = new QTextEdit(frame_10);
-        textEdit->setObjectName("textEdit");
+        inputInstructions = new QTextEdit(frame_10);
+        inputInstructions->setObjectName("inputInstructions");
         QFont font3;
         font3.setPointSize(15);
-        textEdit->setFont(font3);
-        textEdit->viewport()->setProperty("cursor", QVariant(QCursor(Qt::CursorShape::IBeamCursor)));
+        inputInstructions->setFont(font3);
+        inputInstructions->viewport()->setProperty("cursor", QVariant(QCursor(Qt::CursorShape::IBeamCursor)));
 
-        gridLayout_12->addWidget(textEdit, 1, 0, 1, 1);
+        gridLayout_12->addWidget(inputInstructions, 1, 0, 1, 1);
 
 
         gridLayout->addWidget(frame_10, 1, 0, 1, 2);

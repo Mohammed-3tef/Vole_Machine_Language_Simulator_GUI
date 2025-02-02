@@ -10,12 +10,20 @@ CONFIG += c++17
 
 SOURCES += \
     help.cpp \
+    instructions.cpp \
+    machine.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    memory.cpp \
+    register.cpp
 
 HEADERS += \
     help.h \
-    mainwindow.h
+    instructions.h \
+    machine.h \
+    mainwindow.h \
+    memory.h \
+    register.h
 
 FORMS += \
     help.ui \
@@ -30,3 +38,6 @@ RESOURCES += \
     resources.qrc
 
 RC_FILE = app.rc
+
+DISTFILES += \
+    file/file.txt

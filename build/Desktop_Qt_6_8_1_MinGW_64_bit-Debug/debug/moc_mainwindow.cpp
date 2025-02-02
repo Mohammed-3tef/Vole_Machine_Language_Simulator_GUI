@@ -40,11 +40,11 @@ static constexpr auto qt_meta_stringdata_ZN10MainWindowE = QtMocHelpers::stringD
     "MainWindow",
     "on_help_clicked",
     "",
-    "on_loadData_clicked",
     "on_runStep_clicked",
     "on_runAll_clicked",
     "on_clear_clicked",
-    "on_loadFile_clicked"
+    "on_loadFile_clicked",
+    "on_loadInput_clicked"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -93,8 +93,6 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<MainWindow, std::true_type>,
         // method 'on_help_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'on_loadData_clicked'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_runStep_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_runAll_clicked'
@@ -102,6 +100,8 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         // method 'on_clear_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_loadFile_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_loadInput_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -113,11 +113,11 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
         case 0: _t->on_help_clicked(); break;
-        case 1: _t->on_loadData_clicked(); break;
-        case 2: _t->on_runStep_clicked(); break;
-        case 3: _t->on_runAll_clicked(); break;
-        case 4: _t->on_clear_clicked(); break;
-        case 5: _t->on_loadFile_clicked(); break;
+        case 1: _t->on_runStep_clicked(); break;
+        case 2: _t->on_runAll_clicked(); break;
+        case 3: _t->on_clear_clicked(); break;
+        case 4: _t->on_loadFile_clicked(); break;
+        case 5: _t->on_loadInput_clicked(); break;
         default: ;
         }
     }

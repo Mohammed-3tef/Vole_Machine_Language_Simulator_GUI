@@ -3,6 +3,10 @@
 
 #include <QMainWindow>
 #include "help.h"
+#include "instructions.h"
+#include "machine.h"
+#include "memory.h"
+#include "register.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -20,15 +24,18 @@ public:
 
 private slots:
     void on_help_clicked();
-    void on_loadData_clicked();
     void on_runStep_clicked();
     void on_runAll_clicked();
     void on_clear_clicked();
-
     void on_loadFile_clicked();
+    void on_loadInput_clicked();
 
 private:
     Ui::MainWindow *ui;
     Help* help;
+    Instructions instructions;
+    Machine machine;
+    Memory memory;
+    Register regist;
 };
 #endif // MAINWINDOW_H
