@@ -6,7 +6,7 @@
 using namespace std;
 
 int number = 0;
-int i = 0;
+int rr = 0;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -29,45 +29,47 @@ void MainWindow::on_help_clicked()
     help->show();
 }
 
+
 void MainWindow::on_loadInput_clicked()
 {
-    // check validity of instructions
-
-
-
-
-
-
-
-
-
-
-
-    if (!ui->inputInstructions->toPlainText().isEmpty()){
+    // Check validity of instructions
+    if (!ui->inputInstructions->toPlainText().isEmpty()) {
         vector<string> inst;
         QString file = ui->inputInstructions->toPlainText();
-        string fileContent = file.toStdString();;
+        string fileContent = file.toStdString();
 
-        for (int i = 0; i < int(fileContent.size()); ++i) {                  // remove spaces and end lines from the file.
-            fileContent.erase(remove(fileContent.begin(), fileContent.end(), '\n'), fileContent.end());
-            fileContent.erase(remove(fileContent.begin(), fileContent.end(), ' '), fileContent.end());
-        }
-        for (int i = 0; i < int(fileContent.size()); i += 4) {               // put every 4 characters in an index in the vector.
+        // Remove spaces and newlines from the fileContent in a single pass
+        fileContent.erase(remove_if(fileContent.begin(), fileContent.end(),
+                                    [](char c) { return c == ' ' || c == '\n'; }),
+                          fileContent.end());
+
+        // Put every 4 characters in an index in the vector
+        for (int i = 0; i < int(fileContent.size()); i += 4) {
             inst.push_back(fileContent.substr(i, 4));
         }
+
+        // Filter out invalid instructions
+        vector<string> validInst;
         for (int i = 0; i < int(inst.size()); ++i) {
-            for (int j = 0; j < 4; ++j) {                               // check the validity of each char in each index.
+            bool valid = true;
+            for (int j = 0; j < 4; ++j) {
+                // Check the validity of each character in each instruction
                 if (inst[i][j] < 48 || (inst[i][j] > 57 && inst[i][j] < 65) ||
                     (inst[i][j] > 70 && inst[i][j] < 97) || inst[i][j] > 102) {
-                    inst.erase(inst.begin() + i);
-                    i--;
+                    valid = false;
                     break;
                 }
             }
+            if (valid) {
+                validInst.push_back(inst[i]);
+            }
         }
-        instructions.setInstructions(inst);
-        memory.setInstructions(inst);
 
+        // Set the valid instructions
+        instructions.setInstructions(validInst);
+        memory.setInstructions(validInst);
+
+        // Clear and disable UI elements
         ui->inputInstructions->clear();
         ui->inputInstructions->setEnabled(false);
         ui->loadInput->setEnabled(false);
@@ -107,13 +109,13 @@ void MainWindow::on_runStep_clicked()
     bool flag = instructions.getHalted();
 
     if (number == 0) {
-        i = 0;
+        rr = 0;
         ui->runAll->setEnabled(false);
     }
     if (number == 4) {
-        memory.setCounter(nextCounter + (i * 2));
+        memory.setCounter(nextCounter + (rr * 2));
         number = 0;
-        i = 0;
+        rr = 0;
         ui->runStep->setEnabled(false);
     }
 
@@ -172,7 +174,7 @@ void MainWindow::on_runStep_clicked()
 
 void MainWindow::on_runAll_clicked()
 {
-    int i = 0;
+    rr = 0;
     int counter = memory.getCounter();
     int nextCounter = counter;
     bool flag = instructions.getHalted();
@@ -224,7 +226,7 @@ void MainWindow::on_runAll_clicked()
         counter = memory.getCounter();
         flag = instructions.getHalted();
     }
-    memory.setCounter(nextCounter + (i * 2));
+    memory.setCounter(nextCounter + (rr * 2));
 
 
     displayMemory();
@@ -247,7 +249,7 @@ void MainWindow::on_clear_clicked()
     ui->loadInput->setEnabled(true);
     ui->loadFile->setEnabled(true);
     number = 0;
-    i = 0;
+    rr = 0;
 
     for (int row = 0; row < 16; row++) {
         for (int col = 0; col < 16; col++) {
@@ -281,16 +283,20 @@ void MainWindow::on_clear_clicked()
 }
 
 void MainWindow::displayMemory(){
+    int j = 0;
     for (int row = 0; row < 16; row++) {
         for (int col = 0; col < 16; col++) {
-            // Use hexadecimal format for row and column (2 digits, padded with zeros)
+            // Format row and col as two-digit hexadecimal numbers
             QString labelName = QString("x%1%2")
-                                    .arg(row, 2, 16, QChar('0'))  // Format row as 2-digit hex
-                                    .arg(col, 2, 16, QChar('0')); // Format col as 2-digit hex
+                                    .arg(row, 1, 16)  // Convert row to hex (no padding needed)
+                                    .arg(col, 1, 16); // Convert col to hex (no padding needed)
+            labelName = labelName.toUpper(); // Ensure uppercase hex letters (optional)
+
             QLabel* label = findChild<QLabel*>(labelName);
             if (label) {
-                label->setText(QString::fromStdString(memory.getMemory(i)));
+                label->setText(QString::fromStdString(memory.getMemory(j)));
             }
+            j++;
         }
     }
 }
