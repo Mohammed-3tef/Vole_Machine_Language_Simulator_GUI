@@ -6,6 +6,8 @@
 #include <ctime>
 #include <QEventLoop>
 #include <QTimer>
+#include <QFileDialog>
+#include <QMessageBox>
 
 using namespace std;
 
@@ -97,22 +99,63 @@ void MainWindow::on_loadInput_clicked()
 
 void MainWindow::on_loadFile_clicked()
 {
-    // check validity of instructions
-
-
-
-
-
-
     // get the file
+    QString fileName = QFileDialog::getOpenFileName(
+        this,
+        tr("Open File"),
+        "C://",
+        "Text File (*.txt)"
+        );
+
+    if (!fileName.isEmpty()) {
+        QFile file(fileName);
+        if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+            QTextStream in(&file);
+            QString qfile = in.readAll(); // Read entire file into a QString
+            vector<string> inst;
+            string fileContent = qfile.toStdString();
+
+            for (int i = 0; i < int(fileContent.size()); ++i) {
+                fileContent[i] = toupper(fileContent[i]);
+            }
+
+            // Remove spaces and newlines from the fileContent in a single pass
+            fileContent.erase(remove_if(fileContent.begin(), fileContent.end(),
+                                        [](char c) { return c == ' ' || c == '\n'; }),
+                              fileContent.end());
+
+            // Put every 4 characters in an index in the vector
+            for (int i = 0; i < int(fileContent.size()); i += 4) {
+                inst.push_back(fileContent.substr(i, 4));
+            }
+
+            // Filter out invalid instructions
+            vector<string> validInst;
+            for (int i = 0; i < int(inst.size()); ++i) {
+                bool valid = true;
+                for (int j = 0; j < 4; ++j) {
+                    // Check the validity of each character in each instruction
+                    if (inst[i][j] < 48 || (inst[i][j] > 57 && inst[i][j] < 65) ||
+                        (inst[i][j] > 70 && inst[i][j] < 97) || inst[i][j] > 102) {
+                        valid = false;
+                        break;
+                    }
+                }
+                if (valid) {
+                    validInst.push_back(inst[i]);
+                }
+            }
+
+            // Set the valid instructions
+            instructions.setInstructions(validInst);
+            memory.setInstructions(validInst);
 
 
-
-
-
-
-
-
+            file.close();
+        } else {
+            QMessageBox::warning(this, tr("Error"), tr("Could not open file"));
+        }
+    }
 
     ui->inputInstructions->clear();
     ui->inputInstructions->setEnabled(false);
@@ -121,8 +164,6 @@ void MainWindow::on_loadFile_clicked()
     ui->runAll->setEnabled(true);
     ui->runStep->setEnabled(true);
 }
-
-
 
 void MainWindow::on_runStep_clicked()
 {
@@ -135,6 +176,11 @@ void MainWindow::on_runStep_clicked()
 
     while (counter <= 255 && !flag) {
         string instruction = memory.getInstruction();
+        if (instruction == "0000") {
+            ui->currentInstruction->setText("C000 (Stop)");
+            break;
+        }
+
         QString displayInst = "";
         for (char c : instruction) {
             displayInst += QChar(std::toupper(c));
@@ -282,8 +328,8 @@ void MainWindow::on_clear_clicked()
     instructions = newInstructions;
     memory = newMemory;
     regist = newRegist;
-    ui->runStep->setEnabled(true);
-    ui->runAll->setEnabled(true);
+    ui->runStep->setEnabled(false);
+    ui->runAll->setEnabled(false);
     ui->inputInstructions->setEnabled(true);
     ui->loadInput->setEnabled(true);
     ui->loadFile->setEnabled(true);

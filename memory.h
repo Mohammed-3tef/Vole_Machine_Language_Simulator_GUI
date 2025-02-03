@@ -7,7 +7,7 @@ using namespace std;
 class Memory {
 private:
     std::array<string , 256> memory;
-    int counter = 1;
+    int counter = 0;
 public:
     Memory();
     string getMemory(int address);
