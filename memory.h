@@ -7,18 +7,16 @@ using namespace std;
 class Memory {
 private:
     std::array<string , 256> memory;
-    int programCounter = 1;
+    int counter = 1;
 public:
     Memory();
     string getMemory(int address);
     void setMemory(int address, string value);
-    void printMemory();
-    void programCounterIncrement (vector<string>& instructions);
     bool checkDecimal(const string& str);
-    bool checkProgramCounter(int programCounter, vector<string>& instructions);
-    void setProgramCounter(int address);
-    int getProgramCounter ();
     string getInstruction ();
+    void setInstructions(vector<string>instruct);
+    int getCounter();
+    void setCounter(int n);
 };
 
 #endif // MEMORY_H

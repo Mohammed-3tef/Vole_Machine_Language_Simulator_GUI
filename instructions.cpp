@@ -1,15 +1,14 @@
 #include "instructions.h"
 #include "register.h"
 #include "memory.h"
-#include <bits/stdc++.h>
 
+#include <bits/stdc++.h>
 using namespace std;
 
 Instructions::Instructions(){}
 
-vector<string> Instructions::getInstructions() {
-    vector<string> content = instruct;
-    return content;
+void Instructions::setInstructions(vector<string> ins){
+    instruct = ins;
 }
 
 string Instructions::oneComplement(string binary) {
@@ -356,7 +355,8 @@ bool Instructions::compareTwosComplement(const std::string &bin1, const std::str
     return false; // bin1 and bin2 are equal
 }
 
-int Instructions::conditionalJumpGreater(const string &address1, int XY, Register &reg, Memory &mem, int& currentProgramCounter,bool& ff) {
+int Instructions::conditionalJumpGreater(const string &address1, int XY, Register &reg, Memory &mem,
+                                         int& currentProgramCounter,bool& ff) {
     string value1 = reg.getRegister(address1);
     // Convert the hexadecimal value to decimal
     int num1 = stoi(value1, nullptr, 16);
@@ -383,4 +383,3 @@ int Instructions::conditionalJumpGreater(const string &address1, int XY, Registe
         return currentProgramCounter;
     }
 }
-

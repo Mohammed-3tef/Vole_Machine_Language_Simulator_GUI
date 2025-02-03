@@ -11,7 +11,6 @@ CONFIG += c++17
 SOURCES += \
     help.cpp \
     instructions.cpp \
-    machine.cpp \
     main.cpp \
     mainwindow.cpp \
     memory.cpp \
@@ -20,7 +19,6 @@ SOURCES += \
 HEADERS += \
     help.h \
     instructions.h \
-    machine.h \
     mainwindow.h \
     memory.h \
     register.h

@@ -10,8 +10,9 @@ class Instructions {
 private:
     vector<string> instruct;
     bool halted = false;
+
 public:
-    vector<string> getInstructions();
+    void setInstructions(vector<string> ins);
     Instructions();
 
     string oneComplement(string binary);

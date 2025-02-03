@@ -4,7 +4,6 @@
 #include <QMainWindow>
 #include "help.h"
 #include "instructions.h"
-#include "machine.h"
 #include "memory.h"
 #include "register.h"
 
@@ -30,11 +29,13 @@ private slots:
     void on_loadFile_clicked();
     void on_loadInput_clicked();
 
+    void displayRegister();
+    void displayMemory();
+
 private:
     Ui::MainWindow *ui;
     Help* help;
     Instructions instructions;
-    Machine machine;
     Memory memory;
     Register regist;
 };
