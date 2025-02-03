@@ -2435,7 +2435,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Vole Machine Language Simulator", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Vole Machine Language Simulator", nullptr));
         label_78->setText(QCoreApplication::translate("MainWindow", "Register", nullptr));
         label_91->setText(QCoreApplication::translate("MainWindow", "RC", nullptr));

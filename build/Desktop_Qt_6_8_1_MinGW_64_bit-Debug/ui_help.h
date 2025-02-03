@@ -94,7 +94,7 @@ public:
 
     void retranslateUi(QMainWindow *Help)
     {
-        Help->setWindowTitle(QCoreApplication::translate("Help", "MainWindow", nullptr));
+        Help->setWindowTitle(QCoreApplication::translate("Help", "VMLS Help", nullptr));
         label->setText(QCoreApplication::translate("Help", "Help", nullptr));
         textBrowser->setHtml(QCoreApplication::translate("Help", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
