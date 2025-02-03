@@ -49,6 +49,10 @@ void MainWindow::on_loadInput_clicked()
         QString file = ui->inputInstructions->toPlainText();
         string fileContent = file.toStdString();
 
+        for (int i = 0; i < int(fileContent.size()); ++i) {
+            fileContent[i] = toupper(fileContent[i]);
+        }
+
         // Remove spaces and newlines from the fileContent in a single pass
         fileContent.erase(remove_if(fileContent.begin(), fileContent.end(),
                                     [](char c) { return c == ' ' || c == '\n'; }),
@@ -118,14 +122,26 @@ void MainWindow::on_loadFile_clicked()
     ui->runStep->setEnabled(true);
 }
 
+
+
 void MainWindow::on_runStep_clicked()
 {
+    ui->runStep->setEnabled(false);
+    ui->runAll->setEnabled(false);
+
     rr = 0;
     int counter = memory.getCounter();
     bool flag = instructions.getHalted();
 
     while (counter <= 255 && !flag) {
         string instruction = memory.getInstruction();
+        QString displayInst = "";
+        for (char c : instruction) {
+            displayInst += QChar(std::toupper(c));
+        }
+        if (displayInst == "4040") {displayInst = "C000 (Stop)";}
+        ui->currentInstruction->setText(displayInst);
+
         string num = instruction.substr(0, 1);
         string address1 = instruction.substr(1, 1);
         string address2 = instruction.substr(2, 1);
@@ -178,16 +194,11 @@ void MainWindow::on_runStep_clicked()
         displayRegister();
         delay(1000);
     }
-
-    ui->runStep->setEnabled(false);
-    ui->runAll->setEnabled(false);
 }
-
 
 void MainWindow::on_runAll_clicked(){
     rr = 0;
     int counter = memory.getCounter();
-    int nextCounter = counter;
     bool flag = instructions.getHalted();
 
     int maxIterations = 1000;
@@ -217,6 +228,10 @@ void MainWindow::on_runAll_clicked(){
             instructions.loadToRegister(address1, address4, regist);
         } else if (num == "3") {
             instructions.store(address1, address4, regist, memory);
+            if (address4 == "00") {                 // Display what shows on screen
+                std::string hex = memory.getMemory(0);
+                ui->outputScreen->setText(QString::fromStdString(hex));
+            }
         } else if (num == "4") {
             instructions.move(address2, address3, regist);
         } else if (num == "5") {
@@ -252,8 +267,6 @@ void MainWindow::on_runAll_clicked(){
         flag = instructions.getHalted();
     }
 
-    memory.setCounter(nextCounter + (rr * 2));
-
     displayMemory();
     displayRegister();
     ui->runStep->setEnabled(false);
@@ -275,19 +288,15 @@ void MainWindow::on_clear_clicked()
     ui->loadInput->setEnabled(true);
     ui->loadFile->setEnabled(true);
     ui->outputScreen->setText("");
+    ui->currentInstruction->setText("");
     number = 0;
     rr = 0;
 
-    for (int row = 0; row < 16; row++) {
-        for (int col = 0; col < 16; col++) {
-            // Use hexadecimal format for row and column (2 digits, padded with zeros)
-            QString labelName = QString("x%1%2")
-                                    .arg(row, 2, 16, QChar('0'))  // Format row as 2-digit hex
-                                    .arg(col, 2, 16, QChar('0')); // Format col as 2-digit hex
-            QLabel* label = findChild<QLabel*>(labelName);
-            if (label) {
-                label->setText("00");
-            }
+    for (int i = 0; i < 256; i++) {
+        QString labelName = QString("x%1").arg(i, 2, 16, QChar('0')).toLower();
+        QLabel* label = findChild<QLabel*>(labelName);
+        if (label) {
+            label->setText("00");
         }
     }
 
@@ -310,20 +319,11 @@ void MainWindow::on_clear_clicked()
 }
 
 void MainWindow::displayMemory(){
-    int j = 0;
-    for (int row = 0; row < 16; row++) {
-        for (int col = 0; col < 16; col++) {
-            // Format row and col as two-digit hexadecimal numbers
-            QString labelName = QString("x%1%2")
-                                    .arg(row, 1, 16)  // Convert row to hex (no padding needed)
-                                    .arg(col, 1, 16); // Convert col to hex (no padding needed)
-            labelName = labelName.toUpper(); // Ensure uppercase hex letters (optional)
-
-            QLabel* label = findChild<QLabel*>(labelName);
-            if (label) {
-                label->setText(QString::fromStdString(memory.getMemory(j)));
-            }
-            j++;
+    for (int i = 0; i < 256; i++) {
+        QString labelName = QString("x%1").arg(i, 2, 16, QChar('0')).toLower();
+        QLabel* label = findChild<QLabel*>(labelName);
+        if (label) {
+            label->setText(QString::fromStdString(memory.getMemory(i)));
         }
     }
 }

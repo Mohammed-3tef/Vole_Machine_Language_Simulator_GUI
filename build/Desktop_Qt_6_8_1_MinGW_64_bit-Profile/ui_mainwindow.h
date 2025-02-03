@@ -378,7 +378,7 @@ public:
     QFrame *frame_8;
     QGridLayout *gridLayout_13;
     QLabel *label_7;
-    QLabel *label_8;
+    QLabel *currentInstruction;
     QFrame *frame_11;
     QGridLayout *gridLayout_2;
     QPushButton *help;
@@ -2362,13 +2362,15 @@ public:
 
         gridLayout_13->addWidget(label_7, 0, 0, 1, 1);
 
-        label_8 = new QLabel(frame_8);
-        label_8->setObjectName("label_8");
-        label_8->setStyleSheet(QString::fromUtf8("QLabel{\n"
+        currentInstruction = new QLabel(frame_8);
+        currentInstruction->setObjectName("currentInstruction");
+        currentInstruction->setFont(font3);
+        currentInstruction->setStyleSheet(QString::fromUtf8("QLabel{\n"
 "border: 2px solid rgb(50,12,100);\n"
 "}"));
+        currentInstruction->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
-        gridLayout_13->addWidget(label_8, 1, 0, 1, 1);
+        gridLayout_13->addWidget(currentInstruction, 1, 0, 1, 1);
 
 
         gridLayout->addWidget(frame_8, 1, 2, 1, 2);
@@ -2771,7 +2773,7 @@ public:
         label_4->setText(QCoreApplication::translate("MainWindow", "Output Screen", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "Input Instructions", nullptr));
         label_7->setText(QCoreApplication::translate("MainWindow", "Current instruction", nullptr));
-        label_8->setText(QString());
+        currentInstruction->setText(QString());
         help->setText(QCoreApplication::translate("MainWindow", "Help", nullptr));
         loadInput->setText(QCoreApplication::translate("MainWindow", "Load Input", nullptr));
         runStep->setText(QCoreApplication::translate("MainWindow", "Run Step", nullptr));
