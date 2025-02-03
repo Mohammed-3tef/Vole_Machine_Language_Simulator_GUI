@@ -369,7 +369,7 @@ public:
     QLabel *x0f;
     QFrame *frame_7;
     QGridLayout *gridLayout_14;
-    QLabel *label_5;
+    QLabel *outputScreen;
     QLabel *label_4;
     QFrame *frame_10;
     QGridLayout *gridLayout_12;
@@ -2282,13 +2282,19 @@ public:
         frame_7->setFrameShadow(QFrame::Shadow::Raised);
         gridLayout_14 = new QGridLayout(frame_7);
         gridLayout_14->setObjectName("gridLayout_14");
-        label_5 = new QLabel(frame_7);
-        label_5->setObjectName("label_5");
-        label_5->setStyleSheet(QString::fromUtf8("QLabel{\n"
+        outputScreen = new QLabel(frame_7);
+        outputScreen->setObjectName("outputScreen");
+        QFont font3;
+        font3.setPointSize(15);
+        font3.setBold(true);
+        outputScreen->setFont(font3);
+        outputScreen->setStyleSheet(QString::fromUtf8("QLabel{\n"
 "border: 2px solid rgb(50,12,100);\n"
+"color:#000;\n"
 "}"));
+        outputScreen->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
-        gridLayout_14->addWidget(label_5, 1, 0, 1, 1);
+        gridLayout_14->addWidget(outputScreen, 1, 0, 1, 1);
 
         label_4 = new QLabel(frame_7);
         label_4->setObjectName("label_4");
@@ -2324,9 +2330,9 @@ public:
 
         inputInstructions = new QTextEdit(frame_10);
         inputInstructions->setObjectName("inputInstructions");
-        QFont font3;
-        font3.setPointSize(15);
-        inputInstructions->setFont(font3);
+        QFont font4;
+        font4.setPointSize(15);
+        inputInstructions->setFont(font4);
         inputInstructions->viewport()->setProperty("cursor", QVariant(QCursor(Qt::CursorShape::IBeamCursor)));
 
         gridLayout_12->addWidget(inputInstructions, 1, 0, 1, 1);
@@ -2380,10 +2386,7 @@ public:
         help = new QPushButton(frame_11);
         help->setObjectName("help");
         help->setMinimumSize(QSize(0, 50));
-        QFont font4;
-        font4.setPointSize(15);
-        font4.setBold(true);
-        help->setFont(font4);
+        help->setFont(font3);
         help->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
 
         gridLayout_2->addWidget(help, 0, 0, 1, 1);
@@ -2391,7 +2394,7 @@ public:
         loadInput = new QPushButton(frame_11);
         loadInput->setObjectName("loadInput");
         loadInput->setMinimumSize(QSize(0, 50));
-        loadInput->setFont(font4);
+        loadInput->setFont(font3);
         loadInput->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
 
         gridLayout_2->addWidget(loadInput, 0, 1, 1, 1);
@@ -2399,7 +2402,7 @@ public:
         runStep = new QPushButton(frame_11);
         runStep->setObjectName("runStep");
         runStep->setMinimumSize(QSize(0, 50));
-        runStep->setFont(font4);
+        runStep->setFont(font3);
         runStep->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
 
         gridLayout_2->addWidget(runStep, 0, 3, 1, 1);
@@ -2408,7 +2411,7 @@ public:
         clear->setObjectName("clear");
         clear->setMinimumSize(QSize(0, 50));
         clear->setMaximumSize(QSize(16777215, 16777215));
-        clear->setFont(font4);
+        clear->setFont(font3);
         clear->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
 
         gridLayout_2->addWidget(clear, 0, 5, 1, 1);
@@ -2416,14 +2419,14 @@ public:
         runAll = new QPushButton(frame_11);
         runAll->setObjectName("runAll");
         runAll->setMinimumSize(QSize(0, 50));
-        runAll->setFont(font4);
+        runAll->setFont(font3);
 
         gridLayout_2->addWidget(runAll, 0, 4, 1, 1);
 
         loadFile = new QPushButton(frame_11);
         loadFile->setObjectName("loadFile");
         loadFile->setMinimumSize(QSize(0, 50));
-        loadFile->setFont(font4);
+        loadFile->setFont(font3);
         loadFile->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
 
         gridLayout_2->addWidget(loadFile, 0, 2, 1, 1);
@@ -2764,7 +2767,7 @@ public:
         x0d->setText(QCoreApplication::translate("MainWindow", "00", nullptr));
         x0e->setText(QCoreApplication::translate("MainWindow", "00", nullptr));
         x0f->setText(QCoreApplication::translate("MainWindow", "00", nullptr));
-        label_5->setText(QString());
+        outputScreen->setText(QString());
         label_4->setText(QCoreApplication::translate("MainWindow", "Output Screen", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "Input Instructions", nullptr));
         label_7->setText(QCoreApplication::translate("MainWindow", "Current instruction", nullptr));

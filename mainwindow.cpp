@@ -3,6 +3,10 @@
 #include "instructions.h"
 
 #include <bits/stdc++.h>
+#include <ctime>
+#include <QEventLoop>
+#include <QTimer>
+
 using namespace std;
 
 int number = 0;
@@ -14,6 +18,8 @@ MainWindow::MainWindow(QWidget *parent)
     , help(nullptr)
 {
     ui->setupUi(this);
+    ui->runAll->setEnabled(false);
+    ui->runStep->setEnabled(false);
 }
 
 MainWindow::~MainWindow()
@@ -29,6 +35,11 @@ void MainWindow::on_help_clicked()
     help->show();
 }
 
+void delay(int milliseconds) {
+    QEventLoop loop;
+    QTimer::singleShot(milliseconds, &loop, &QEventLoop::quit);
+    loop.exec(); // Start the event loop and wait
+}
 
 void MainWindow::on_loadInput_clicked()
 {
@@ -74,8 +85,11 @@ void MainWindow::on_loadInput_clicked()
         ui->inputInstructions->setEnabled(false);
         ui->loadInput->setEnabled(false);
         ui->loadFile->setEnabled(false);
+        ui->runAll->setEnabled(true);
+        ui->runStep->setEnabled(true);
     }
 }
+
 
 void MainWindow::on_loadFile_clicked()
 {
@@ -100,26 +114,17 @@ void MainWindow::on_loadFile_clicked()
     ui->inputInstructions->setEnabled(false);
     ui->loadInput->setEnabled(false);
     ui->loadFile->setEnabled(false);
+    ui->runAll->setEnabled(true);
+    ui->runStep->setEnabled(true);
 }
 
 void MainWindow::on_runStep_clicked()
 {
+    rr = 0;
     int counter = memory.getCounter();
-    int nextCounter = counter;
     bool flag = instructions.getHalted();
 
-    if (number == 0) {
-        rr = 0;
-        ui->runAll->setEnabled(false);
-    }
-    if (number == 4) {
-        memory.setCounter(nextCounter + (rr * 2));
-        number = 0;
-        rr = 0;
-        ui->runStep->setEnabled(false);
-    }
-
-    if (counter <= 255 && !flag) {
+    while (counter <= 255 && !flag) {
         string instruction = memory.getInstruction();
         string num = instruction.substr(0, 1);
         string address1 = instruction.substr(1, 1);
@@ -135,7 +140,10 @@ void MainWindow::on_runStep_clicked()
             instructions.loadToRegister(address1, address4, regist);
         } else if (num == "3") {
             instructions.store(address1, address4, regist, memory);
-            if (address4 == "00") {string hex = memory.getMemory(0);} // Display what shows on screen
+            if (address4 == "00") {                 // Display what shows on screen
+                std::string hex = memory.getMemory(0);
+                ui->outputScreen->setText(QString::fromStdString(hex));
+            }
         } else if (num == "4") {
             instructions.move(address2, address3, regist);
         } else if (num == "5") {
@@ -168,19 +176,33 @@ void MainWindow::on_runStep_clicked()
 
         displayMemory();
         displayRegister();
-        number ++;
+        delay(1000);
     }
+
+    ui->runStep->setEnabled(false);
+    ui->runAll->setEnabled(false);
 }
 
-void MainWindow::on_runAll_clicked()
-{
+
+void MainWindow::on_runAll_clicked(){
     rr = 0;
     int counter = memory.getCounter();
     int nextCounter = counter;
     bool flag = instructions.getHalted();
 
+    int maxIterations = 1000;
+    int iterationCount = 0;
+
     while (counter <= 255 && !flag) {
+        if (++iterationCount > maxIterations) {
+            break;
+        }
+
         string instruction = memory.getInstruction();
+        if (instruction.empty() || instruction.length() != 4) {
+            break;
+        }
+
         string num = instruction.substr(0, 1);
         string address1 = instruction.substr(1, 1);
         string address2 = instruction.substr(2, 1);
@@ -195,7 +217,6 @@ void MainWindow::on_runAll_clicked()
             instructions.loadToRegister(address1, address4, regist);
         } else if (num == "3") {
             instructions.store(address1, address4, regist, memory);
-            if (address4 == "00") {string hex = memory.getMemory(0);} // Display what shows on screen
         } else if (num == "4") {
             instructions.move(address2, address3, regist);
         } else if (num == "5") {
@@ -217,23 +238,28 @@ void MainWindow::on_runAll_clicked()
             if (ff) counter -= 2;
         } else if (num == "C" || num == "c") {
             instructions.halt();
+            break;
         } else if (num == "D" || num == "d") {
             XY = stoi(address4, nullptr, 16);
             counter = instructions.conditionalJumpGreater(address1, XY, regist, memory, counter, ff);
             if (ff) counter -= 2;
+        } else {
+            break;
         }
+
         memory.setCounter(counter + 2);
         counter = memory.getCounter();
         flag = instructions.getHalted();
     }
-    memory.setCounter(nextCounter + (rr * 2));
 
+    memory.setCounter(nextCounter + (rr * 2));
 
     displayMemory();
     displayRegister();
     ui->runStep->setEnabled(false);
     ui->runAll->setEnabled(false);
 }
+
 
 void MainWindow::on_clear_clicked()
 {
@@ -248,6 +274,7 @@ void MainWindow::on_clear_clicked()
     ui->inputInstructions->setEnabled(true);
     ui->loadInput->setEnabled(true);
     ui->loadFile->setEnabled(true);
+    ui->outputScreen->setText("");
     number = 0;
     rr = 0;
 
