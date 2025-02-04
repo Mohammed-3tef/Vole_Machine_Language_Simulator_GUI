@@ -13,6 +13,21 @@
   <property name="windowTitle">
    <string>VMLS Help</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+	background-color: rgb(18, 20, 32);
+	color : rgb(224, 225, 221);
+}
+
+QFrame {
+	background-color: rgb(27, 38, 59);
+	color : rgb(224, 225, 221);
+}
+
+QLabel {
+	color : rgb(224, 225, 221);
+}</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
@@ -25,9 +40,15 @@
       </property>
       <property name="font">
        <font>
-        <pointsize>20</pointsize>
+        <pointsize>22</pointsize>
         <bold>true</bold>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+	color: rgb(224, 225, 221);
+	background-color: rgb(18, 20, 32);
+}</string>
       </property>
       <property name="text">
        <string>Help</string>
@@ -39,6 +60,9 @@
     </item>
     <item row="1" column="0">
      <widget class="QScrollArea" name="scrollArea">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(18, 20, 32);</string>
+      </property>
       <property name="widgetResizable">
        <bool>true</bool>
       </property>
@@ -47,13 +71,16 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>780</width>
-         <height>538</height>
+         <width>776</width>
+         <height>520</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout_2">
         <item row="0" column="0">
          <widget class="QTextBrowser" name="textBrowser">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(27, 38, 59);</string>
+          </property>
           <property name="html">
            <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -172,19 +199,29 @@ li.checked::marker { content: &quot;\2612&quot;; }
         </item>
         <item row="1" column="0">
          <widget class="QPushButton" name="back">
+          <property name="font">
+           <font>
+            <pointsize>14</pointsize>
+            <italic>true</italic>
+            <bold>true</bold>
+           </font>
+          </property>
           <property name="cursor">
            <cursorShape>PointingHandCursor</cursorShape>
           </property>
           <property name="styleSheet">
            <string notr="true">QPushButton {
-	margin:0% 250%;
-	
-    color: #000; 
-    border: 2px solid rgb(0,0,0) ;
-    border-radius: 50px;
+	margin:0% 200%;
+    background-color: rgb(65, 90, 119);
+	color: rgb(224, 225, 221);
+    border-radius: 10px;
     padding: 5px;
 }
-</string>
+
+QPushButton:hover {
+	background-color: rgb(119, 141, 169);
+	color: rgb(224, 225, 221);
+}</string>
           </property>
           <property name="text">
            <string>I Understood</string>

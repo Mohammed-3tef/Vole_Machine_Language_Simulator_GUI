@@ -38,6 +38,19 @@ public:
         if (Help->objectName().isEmpty())
             Help->setObjectName("Help");
         Help->resize(800, 600);
+        Help->setStyleSheet(QString::fromUtf8("QMainWindow {\n"
+"	background-color: rgb(18, 20, 32);\n"
+"	color : rgb(224, 225, 221);\n"
+"}\n"
+"\n"
+"QFrame {\n"
+"	background-color: rgb(27, 38, 59);\n"
+"	color : rgb(224, 225, 221);\n"
+"}\n"
+"\n"
+"QLabel {\n"
+"	color : rgb(224, 225, 221);\n"
+"}"));
         centralwidget = new QWidget(Help);
         centralwidget->setObjectName("centralwidget");
         gridLayout = new QGridLayout(centralwidget);
@@ -46,38 +59,52 @@ public:
         label->setObjectName("label");
         label->setMaximumSize(QSize(16777215, 50));
         QFont font;
-        font.setPointSize(20);
+        font.setPointSize(22);
         font.setBold(true);
         label->setFont(font);
+        label->setStyleSheet(QString::fromUtf8("QLabel{\n"
+"	color: rgb(224, 225, 221);\n"
+"	background-color: rgb(18, 20, 32);\n"
+"}"));
         label->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
         gridLayout->addWidget(label, 0, 0, 1, 1);
 
         scrollArea = new QScrollArea(centralwidget);
         scrollArea->setObjectName("scrollArea");
+        scrollArea->setStyleSheet(QString::fromUtf8("background-color: rgb(18, 20, 32);"));
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents_2 = new QWidget();
         scrollAreaWidgetContents_2->setObjectName("scrollAreaWidgetContents_2");
-        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 780, 538));
+        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 776, 520));
         gridLayout_2 = new QGridLayout(scrollAreaWidgetContents_2);
         gridLayout_2->setObjectName("gridLayout_2");
         textBrowser = new QTextBrowser(scrollAreaWidgetContents_2);
         textBrowser->setObjectName("textBrowser");
+        textBrowser->setStyleSheet(QString::fromUtf8("background-color: rgb(27, 38, 59);"));
 
         gridLayout_2->addWidget(textBrowser, 0, 0, 1, 1);
 
         back = new QPushButton(scrollAreaWidgetContents_2);
         back->setObjectName("back");
+        QFont font1;
+        font1.setPointSize(14);
+        font1.setBold(true);
+        font1.setItalic(true);
+        back->setFont(font1);
         back->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
         back->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"	margin:0% 250%;\n"
-"	\n"
-"    color: #000; \n"
-"    border: 2px solid rgb(0,0,0) ;\n"
-"    border-radius: 50px;\n"
+"	margin:0% 200%;\n"
+"    background-color: rgb(65, 90, 119);\n"
+"	color: rgb(224, 225, 221);\n"
+"    border-radius: 10px;\n"
 "    padding: 5px;\n"
 "}\n"
-""));
+"\n"
+"QPushButton:hover {\n"
+"	background-color: rgb(119, 141, 169);\n"
+"	color: rgb(224, 225, 221);\n"
+"}"));
 
         gridLayout_2->addWidget(back, 1, 0, 1, 1);
 
