@@ -47,9 +47,10 @@ The Vole Machine Language Simulator GUI is a graphical application designed to s
 | C      | 000    | **HALT** execution. |
 | D      | RXY    | **JUMP** to instruction in RAM cell XY if the content of register R is greater than (>) the content of register 0. Data is interpreted as integers in two's complement notation. |
 
+
 ## 🖼️ Screenshots
 
-![VMLS](https://github.com/user-attachments/assets/5297f5e2-3db7-4a7f-b894-b548b44da159)
+<img src="./img/VMLS.png" alt="Vole Machine Language Simulator GUI Screenshot">
 
 
 ## 🛠️ Getting Started
