@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Vole Machine Language Simulator</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0" colspan="6">
@@ -928,326 +931,100 @@ border: none;
              <enum>QFrame::Shadow::Raised</enum>
             </property>
             <layout class="QGridLayout" name="gridLayout_6">
-             <item row="12" column="11">
-              <widget class="QLabel" name="xab">
+             <item row="6" column="4">
+              <widget class="QLabel" name="x44">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="1" column="11">
-              <widget class="QLabel" name="x1b">
+             <item row="9" column="1">
+              <widget class="QLabel" name="x71">
+               <property name="text">
+                <string>00</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="9">
+              <widget class="QLabel" name="x69">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="13" column="12">
-              <widget class="QLabel" name="xbc">
+             <item row="3" column="10">
+              <widget class="QLabel" name="x2a">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="12" column="10">
-              <widget class="QLabel" name="xaa">
+             <item row="14" column="2">
+              <widget class="QLabel" name="xb2">
+               <property name="text">
+                <string>00</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="5">
+              <widget class="QLabel" name="x65">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="18" column="10">
-              <widget class="QLabel" name="xea">
+             <item row="0" column="15">
+              <widget class="QLabel" name="x0f">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="6" column="10">
-              <widget class="QLabel" name="x5a">
+             <item row="0" column="6">
+              <widget class="QLabel" name="x06">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="4" column="9">
-              <widget class="QLabel" name="x39">
+             <item row="12" column="0">
+              <widget class="QLabel" name="x90">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="8" column="13">
-              <widget class="QLabel" name="x7d">
+             <item row="6" column="13">
+              <widget class="QLabel" name="x4d">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
              <item row="14" column="11">
-              <widget class="QLabel" name="xcb">
+              <widget class="QLabel" name="xbb">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="6" column="8">
-              <widget class="QLabel" name="x58">
+             <item row="20" column="9">
+              <widget class="QLabel" name="xf9">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="2" column="9">
-              <widget class="QLabel" name="x29">
+             <item row="20" column="13">
+              <widget class="QLabel" name="xfd">
                <property name="text">
                 <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="9">
-              <widget class="QLabel" name="x19">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="13">
-              <widget class="QLabel" name="x1d">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="8" column="14">
-              <widget class="QLabel" name="x7e">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="13" column="10">
-              <widget class="QLabel" name="xba">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="14" column="4">
-              <widget class="QLabel" name="xc4">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="17" column="6">
-              <widget class="QLabel" name="xd6">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="19" column="7">
-              <widget class="QLabel" name="xf7">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="18" column="1">
-              <widget class="QLabel" name="xe1">
-               <property name="text">
-                <string>00</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignmentFlag::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item row="11" column="4">
-              <widget class="QLabel" name="x94">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="13" column="9">
-              <widget class="QLabel" name="xb9">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="5" column="11">
-              <widget class="QLabel" name="x4b">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="14" column="5">
-              <widget class="QLabel" name="xc5">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="7" column="11">
-              <widget class="QLabel" name="x6b">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="19" column="14">
-              <widget class="QLabel" name="xfe">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="6" column="14">
-              <widget class="QLabel" name="x5e">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="11" column="7">
-              <widget class="QLabel" name="x97">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="4" column="15">
-              <widget class="QLabel" name="x3f">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="14" column="10">
-              <widget class="QLabel" name="xca">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="17" column="15">
-              <widget class="QLabel" name="xdf">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="14" column="12">
-              <widget class="QLabel" name="xcc">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="14">
-              <widget class="QLabel" name="x1e">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="9" column="3">
-              <widget class="QLabel" name="x83">
-               <property name="text">
-                <string>00</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignmentFlag::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item row="13" column="3">
-              <widget class="QLabel" name="xb3">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="19" column="6">
-              <widget class="QLabel" name="xf6">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="12" column="4">
-              <widget class="QLabel" name="xa4">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="8" column="11">
-              <widget class="QLabel" name="x7b">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="12">
-              <widget class="QLabel" name="x1c">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="8" column="4">
-              <widget class="QLabel" name="x74">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="7" column="3">
-              <widget class="QLabel" name="x63">
-               <property name="text">
-                <string>00</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignmentFlag::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="7">
-              <widget class="QLabel" name="x17">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="17" column="2">
-              <widget class="QLabel" name="xd2">
-               <property name="text">
-                <string>00</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignmentFlag::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item row="18" column="12">
-              <widget class="QLabel" name="xec">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="6" column="2">
-              <widget class="QLabel" name="x52">
-               <property name="text">
-                <string>00</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignmentFlag::AlignCenter</set>
                </property>
               </widget>
              </item>
@@ -1261,64 +1038,106 @@ border: none;
                </property>
               </widget>
              </item>
-             <item row="13" column="8">
-              <widget class="QLabel" name="xb8">
+             <item row="15" column="15">
+              <widget class="QLabel" name="xcf">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="5" column="5">
-              <widget class="QLabel" name="x45">
+             <item row="20" column="10">
+              <widget class="QLabel" name="xfa">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="9" column="10">
-              <widget class="QLabel" name="x8a">
+             <item row="14" column="10">
+              <widget class="QLabel" name="xba">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="17" column="8">
+             <item row="3" column="6">
+              <widget class="QLabel" name="x26">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="13" column="6">
+              <widget class="QLabel" name="xa6">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="10">
+              <widget class="QLabel" name="x5a">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="0">
+              <widget class="QLabel" name="x70">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <widget class="QLabel" name="x02">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="10" column="4">
+              <widget class="QLabel" name="x84">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="20" column="15">
+              <widget class="QLabel" name="xff">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="18" column="8">
               <widget class="QLabel" name="xd8">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="9" column="7">
-              <widget class="QLabel" name="x87">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="12">
+             <item row="3" column="12">
               <widget class="QLabel" name="x2c">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="6" column="6">
-              <widget class="QLabel" name="x56">
+             <item row="15" column="4">
+              <widget class="QLabel" name="xc4">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="17" column="13">
-              <widget class="QLabel" name="xdd">
+             <item row="19" column="5">
+              <widget class="QLabel" name="xe5">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="8" column="1">
-              <widget class="QLabel" name="x71">
+             <item row="8" column="3">
+              <widget class="QLabel" name="x63">
                <property name="text">
                 <string>00</string>
                </property>
@@ -1327,7 +1146,35 @@ border: none;
                </property>
               </widget>
              </item>
-             <item row="5" column="3">
+             <item row="20" column="7">
+              <widget class="QLabel" name="xf7">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="15">
+              <widget class="QLabel" name="x3f">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="8">
+              <widget class="QLabel" name="x58">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="14" column="9">
+              <widget class="QLabel" name="xb9">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="3">
               <widget class="QLabel" name="x43">
                <property name="text">
                 <string>00</string>
@@ -1337,8 +1184,22 @@ border: none;
                </property>
               </widget>
              </item>
-             <item row="11" column="1">
-              <widget class="QLabel" name="x91">
+             <item row="8" column="10">
+              <widget class="QLabel" name="x6a">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="11">
+              <widget class="QLabel" name="x2b">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="15" column="2">
+              <widget class="QLabel" name="xc2">
                <property name="text">
                 <string>00</string>
                </property>
@@ -1347,29 +1208,274 @@ border: none;
                </property>
               </widget>
              </item>
-             <item row="19" column="0">
-              <widget class="QLabel" name="xf0">
+             <item row="7" column="3">
+              <widget class="QLabel" name="x53">
+               <property name="text">
+                <string>00</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="11">
+              <widget class="QLabel" name="x0b">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="12" column="5">
-              <widget class="QLabel" name="xa5">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="14" column="14">
-              <widget class="QLabel" name="xce">
+             <item row="18" column="12">
+              <widget class="QLabel" name="xdc">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
              <item row="6" column="0">
-              <widget class="QLabel" name="x50">
+              <widget class="QLabel" name="x40">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="12">
+              <widget class="QLabel" name="x5c">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="2">
+              <widget class="QLabel" name="x52">
+               <property name="text">
+                <string>00</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="14" column="7">
+              <widget class="QLabel" name="xb7">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="18" column="9">
+              <widget class="QLabel" name="xd9">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="14">
+              <widget class="QLabel" name="x6e">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="2">
+              <widget class="QLabel" name="x32">
+               <property name="text">
+                <string>00</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="4">
+              <widget class="QLabel" name="x64">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="10" column="7">
+              <widget class="QLabel" name="x87">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="20" column="6">
+              <widget class="QLabel" name="xf6">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="5">
+              <widget class="QLabel" name="x75">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="15">
+              <widget class="QLabel" name="x4f">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="18" column="10">
+              <widget class="QLabel" name="xda">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="20" column="11">
+              <widget class="QLabel" name="xfb">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="19" column="3">
+              <widget class="QLabel" name="xe3">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="19" column="2">
+              <widget class="QLabel" name="xe2">
+               <property name="text">
+                <string>00</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="19" column="12">
+              <widget class="QLabel" name="xec">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="2">
+              <widget class="QLabel" name="x42">
+               <property name="text">
+                <string>00</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="20" column="2">
+              <widget class="QLabel" name="xf2">
+               <property name="text">
+                <string>00</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="13" column="12">
+              <widget class="QLabel" name="xac">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="13" column="4">
+              <widget class="QLabel" name="xa4">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="5">
+              <widget class="QLabel" name="x45">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="12">
+              <widget class="QLabel" name="x6c">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="8">
+              <widget class="QLabel" name="x78">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="12" column="7">
+              <widget class="QLabel" name="x97">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="15" column="14">
+              <widget class="QLabel" name="xce">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="15" column="5">
+              <widget class="QLabel" name="xc5">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="4">
+              <widget class="QLabel" name="x54">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="1">
+              <widget class="QLabel" name="x31">
+               <property name="text">
+                <string>00</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="14" column="13">
+              <widget class="QLabel" name="xbd">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="12" column="5">
+              <widget class="QLabel" name="x95">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="14">
+              <widget class="QLabel" name="x1e">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="12" column="8">
+              <widget class="QLabel" name="x98">
                <property name="text">
                 <string>00</string>
                </property>
@@ -1382,8 +1488,15 @@ border: none;
                </property>
               </widget>
              </item>
-             <item row="19" column="2">
-              <widget class="QLabel" name="xf2">
+             <item row="7" column="7">
+              <widget class="QLabel" name="x57">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="2">
+              <widget class="QLabel" name="x22">
                <property name="text">
                 <string>00</string>
                </property>
@@ -1392,8 +1505,395 @@ border: none;
                </property>
               </widget>
              </item>
-             <item row="4" column="7">
+             <item row="3" column="8">
+              <widget class="QLabel" name="x28">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="18" column="13">
+              <widget class="QLabel" name="xdd">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="19" column="15">
+              <widget class="QLabel" name="xef">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="13" column="14">
+              <widget class="QLabel" name="xae">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="7">
+              <widget class="QLabel" name="x27">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="12">
+              <widget class="QLabel" name="x0c">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="10">
+              <widget class="QLabel" name="x4a">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="9">
+              <widget class="QLabel" name="x19">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="14">
+              <widget class="QLabel" name="x7e">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="7">
+              <widget class="QLabel" name="x77">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="9">
+              <widget class="QLabel" name="x29">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="19" column="1">
+              <widget class="QLabel" name="xe1">
+               <property name="text">
+                <string>00</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="12">
+              <widget class="QLabel" name="x1c">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="10" column="13">
+              <widget class="QLabel" name="x8d">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="7">
+              <widget class="QLabel" name="x07">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="10">
+              <widget class="QLabel" name="x0a">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="19" column="10">
+              <widget class="QLabel" name="xea">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="10" column="0">
+              <widget class="QLabel" name="x80">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="6">
+              <widget class="QLabel" name="x76">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="15" column="6">
+              <widget class="QLabel" name="xc6">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="14">
+              <widget class="QLabel" name="x3e">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="20" column="8">
+              <widget class="QLabel" name="xf8">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="9">
+              <widget class="QLabel" name="x59">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="15">
+              <widget class="QLabel" name="x1f">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="4">
+              <widget class="QLabel" name="x34">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="10" column="12">
+              <widget class="QLabel" name="x8c">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="11">
+              <widget class="QLabel" name="x5b">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="14" column="3">
+              <widget class="QLabel" name="xb3">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="12" column="6">
+              <widget class="QLabel" name="x96">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="6">
+              <widget class="QLabel" name="x16">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="19" column="9">
+              <widget class="QLabel" name="xe9">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="4">
+              <widget class="QLabel" name="x14">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="7">
               <widget class="QLabel" name="x37">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="18" column="1">
+              <widget class="QLabel" name="xd1">
+               <property name="text">
+                <string>00</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="15">
+              <widget class="QLabel" name="x5f">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="14" column="8">
+              <widget class="QLabel" name="xb8">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="12">
+              <widget class="QLabel" name="x3c">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="12" column="11">
+              <widget class="QLabel" name="x9b">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="8">
+              <widget class="QLabel" name="x48">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="3">
+              <widget class="QLabel" name="x73">
+               <property name="text">
+                <string>00</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="10" column="11">
+              <widget class="QLabel" name="x8b">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="12">
+              <widget class="QLabel" name="x7c">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="11">
+              <widget class="QLabel" name="x7b">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="9">
+              <widget class="QLabel" name="x09">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="12" column="10">
+              <widget class="QLabel" name="x9a">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="8">
+              <widget class="QLabel" name="x68">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="19" column="0">
+              <widget class="QLabel" name="xe0">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="5">
+              <widget class="QLabel" name="x05">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="18" column="3">
+              <widget class="QLabel" name="xd3">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="15" column="7">
+              <widget class="QLabel" name="xc7">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="18" column="0">
+              <widget class="QLabel" name="xd0">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="20" column="4">
+              <widget class="QLabel" name="xf4">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="9">
+              <widget class="QLabel" name="x39">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="10" column="8">
+              <widget class="QLabel" name="x88">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="7">
+              <widget class="QLabel" name="x47">
                <property name="text">
                 <string>00</string>
                </property>
@@ -1406,24 +1906,34 @@ border: none;
                </property>
               </widget>
              </item>
-             <item row="18" column="0">
-              <widget class="QLabel" name="xe0">
+             <item row="19" column="14">
+              <widget class="QLabel" name="xee">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="7" column="6">
-              <widget class="QLabel" name="x66">
+             <item row="12" column="13">
+              <widget class="QLabel" name="x9d">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="4" column="12">
-              <widget class="QLabel" name="x3c">
+             <item row="13" column="0">
+              <widget class="QLabel" name="xa0">
                <property name="text">
                 <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="10" column="3">
+              <widget class="QLabel" name="x83">
+               <property name="text">
+                <string>00</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
                </property>
               </widget>
              </item>
@@ -1434,561 +1944,56 @@ border: none;
                </property>
               </widget>
              </item>
-             <item row="2" column="14">
-              <widget class="QLabel" name="x2e">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="19" column="1">
-              <widget class="QLabel" name="xf1">
-               <property name="text">
-                <string>00</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignmentFlag::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item row="17" column="0">
-              <widget class="QLabel" name="xd0">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="7" column="0">
-              <widget class="QLabel" name="x60">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="7" column="13">
-              <widget class="QLabel" name="x6d">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="11" column="15">
-              <widget class="QLabel" name="x9f">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="18" column="15">
-              <widget class="QLabel" name="xef">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="4">
-              <widget class="QLabel" name="x24">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="11" column="2">
-              <widget class="QLabel" name="x92">
-               <property name="text">
-                <string>00</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignmentFlag::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item row="11" column="8">
-              <widget class="QLabel" name="x98">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="13" column="5">
-              <widget class="QLabel" name="xb5">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="14" column="6">
-              <widget class="QLabel" name="xc6">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="6" column="5">
-              <widget class="QLabel" name="x55">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="4" column="5">
-              <widget class="QLabel" name="x35">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="9" column="6">
-              <widget class="QLabel" name="x86">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="6" column="1">
-              <widget class="QLabel" name="x51">
-               <property name="text">
-                <string>00</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignmentFlag::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item row="11" column="9">
-              <widget class="QLabel" name="x99">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="12" column="14">
-              <widget class="QLabel" name="xae">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="18" column="6">
-              <widget class="QLabel" name="xe6">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="13" column="15">
-              <widget class="QLabel" name="xbf">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="4" column="8">
-              <widget class="QLabel" name="x38">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="4" column="14">
-              <widget class="QLabel" name="x3e">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="5" column="6">
-              <widget class="QLabel" name="x46">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="4" column="3">
-              <widget class="QLabel" name="x23">
-               <property name="text">
-                <string>00</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignmentFlag::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item row="18" column="4">
-              <widget class="QLabel" name="xe4">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="5" column="8">
-              <widget class="QLabel" name="x48">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="6">
-              <widget class="QLabel" name="x26">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="4" column="1">
-              <widget class="QLabel" name="x31">
-               <property name="text">
-                <string>00</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignmentFlag::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item row="5" column="0">
-              <widget class="QLabel" name="x40">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="8" column="0">
-              <widget class="QLabel" name="x70">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="12" column="0">
-              <widget class="QLabel" name="xa0">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="19" column="3">
-              <widget class="QLabel" name="xf3">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="4" column="10">
-              <widget class="QLabel" name="x3a">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="14" column="2">
-              <widget class="QLabel" name="xc2">
-               <property name="text">
-                <string>00</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignmentFlag::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item row="4" column="0">
-              <widget class="QLabel" name="x30">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="12" column="7">
+             <item row="13" column="7">
               <widget class="QLabel" name="xa7">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="8" column="5">
-              <widget class="QLabel" name="x75">
+             <item row="10" column="10">
+              <widget class="QLabel" name="x8a">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="5" column="15">
-              <widget class="QLabel" name="x4f">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="12" column="2">
-              <widget class="QLabel" name="xa2">
-               <property name="text">
-                <string>00</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignmentFlag::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item row="11" column="10">
-              <widget class="QLabel" name="x9a">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="9" column="12">
-              <widget class="QLabel" name="x8c">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="8" column="2">
-              <widget class="QLabel" name="x72">
-               <property name="text">
-                <string>00</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignmentFlag::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item row="6" column="12">
-              <widget class="QLabel" name="x5c">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="12" column="3">
-              <widget class="QLabel" name="xa3">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="17" column="9">
-              <widget class="QLabel" name="xd9">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="7" column="8">
-              <widget class="QLabel" name="x68">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="9" column="5">
-              <widget class="QLabel" name="x85">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="19" column="12">
-              <widget class="QLabel" name="xfc">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="18" column="14">
-              <widget class="QLabel" name="xee">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="5">
-              <widget class="QLabel" name="x25">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="7" column="14">
-              <widget class="QLabel" name="x6e">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="7" column="7">
-              <widget class="QLabel" name="x67">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="6" column="9">
-              <widget class="QLabel" name="x59">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="17" column="3">
-              <widget class="QLabel" name="xd3">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="19" column="15">
-              <widget class="QLabel" name="xff">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="17" column="10">
-              <widget class="QLabel" name="xda">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="9" column="15">
+             <item row="10" column="15">
               <widget class="QLabel" name="x8f">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="11" column="0">
-              <widget class="QLabel" name="x90">
+             <item row="18" column="4">
+              <widget class="QLabel" name="xd4">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="12" column="1">
-              <widget class="QLabel" name="xa1">
-               <property name="text">
-                <string>00</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignmentFlag::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item row="5" column="1">
-              <widget class="QLabel" name="x41">
-               <property name="text">
-                <string>00</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignmentFlag::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="2">
-              <widget class="QLabel" name="x12">
-               <property name="text">
-                <string>00</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignmentFlag::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item row="19" column="8">
-              <widget class="QLabel" name="xf8">
+             <item row="13" column="5">
+              <widget class="QLabel" name="xa5">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="5" column="13">
-              <widget class="QLabel" name="x4d">
+             <item row="5" column="11">
+              <widget class="QLabel" name="x3b">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="5" column="2">
-              <widget class="QLabel" name="x42">
-               <property name="text">
-                <string>00</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignmentFlag::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item row="8" column="9">
-              <widget class="QLabel" name="x79">
+             <item row="14" column="6">
+              <widget class="QLabel" name="xb6">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="19" column="11">
-              <widget class="QLabel" name="xfb">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="9" column="4">
-              <widget class="QLabel" name="x84">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="12" column="13">
-              <widget class="QLabel" name="xad">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="14" column="7">
-              <widget class="QLabel" name="xc7">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="18" column="8">
-              <widget class="QLabel" name="xe8">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="9" column="8">
-              <widget class="QLabel" name="x88">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="5" column="4">
-              <widget class="QLabel" name="x44">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="5" column="10">
-              <widget class="QLabel" name="x4a">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="14" column="9">
-              <widget class="QLabel" name="xc9">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="7" column="1">
+             <item row="8" column="1">
               <widget class="QLabel" name="x61">
                <property name="text">
                 <string>00</string>
@@ -1998,50 +2003,421 @@ border: none;
                </property>
               </widget>
              </item>
-             <item row="19" column="13">
-              <widget class="QLabel" name="xfd">
+             <item row="8" column="15">
+              <widget class="QLabel" name="x6f">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="2" column="10">
-              <widget class="QLabel" name="x2a">
+             <item row="6" column="12">
+              <widget class="QLabel" name="x4c">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="7" column="12">
-              <widget class="QLabel" name="x6c">
+             <item row="13" column="11">
+              <widget class="QLabel" name="xab">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="12" column="6">
-              <widget class="QLabel" name="xa6">
+             <item row="5" column="8">
+              <widget class="QLabel" name="x38">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="17" column="11">
-              <widget class="QLabel" name="xdb">
+             <item row="18" column="2">
+              <widget class="QLabel" name="xd2">
+               <property name="text">
+                <string>00</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="13">
+              <widget class="QLabel" name="x6d">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="4">
+              <widget class="QLabel" name="x24">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="14" column="5">
+              <widget class="QLabel" name="xb5">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="15">
+              <widget class="QLabel" name="x7f">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="12" column="4">
+              <widget class="QLabel" name="x94">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="13" column="1">
+              <widget class="QLabel" name="xa1">
+               <property name="text">
+                <string>00</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="6">
+              <widget class="QLabel" name="x66">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="12" column="12">
+              <widget class="QLabel" name="x9c">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0">
+              <widget class="QLabel" name="x20">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="13">
+              <widget class="QLabel" name="x7d">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="13">
+              <widget class="QLabel" name="x1d">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="14">
+              <widget class="QLabel" name="x5e">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="10" column="1">
+              <widget class="QLabel" name="x81">
+               <property name="text">
+                <string>00</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="12" column="14">
+              <widget class="QLabel" name="x9e">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="11">
+              <widget class="QLabel" name="x6b">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="5">
+              <widget class="QLabel" name="x25">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="13" column="15">
+              <widget class="QLabel" name="xaf">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="14">
+              <widget class="QLabel" name="x4e">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="10">
+              <widget class="QLabel" name="x7a">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="18" column="14">
+              <widget class="QLabel" name="xde">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="18" column="15">
+              <widget class="QLabel" name="xdf">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="13" column="3">
+              <widget class="QLabel" name="xa3">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
              <item row="8" column="7">
-              <widget class="QLabel" name="x77">
+              <widget class="QLabel" name="x67">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="17" column="5">
-              <widget class="QLabel" name="xd5">
+             <item row="6" column="1">
+              <widget class="QLabel" name="x41">
+               <property name="text">
+                <string>00</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="4">
+              <widget class="QLabel" name="x04">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="20" column="14">
+              <widget class="QLabel" name="xfe">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="5">
+              <widget class="QLabel" name="x55">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="10">
+              <widget class="QLabel" name="x1a">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="13">
+              <widget class="QLabel" name="x3d">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="4">
+              <widget class="QLabel" name="x74">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="15" column="11">
+              <widget class="QLabel" name="xcb">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="15">
+              <widget class="QLabel" name="x2f">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="20" column="3">
+              <widget class="QLabel" name="xf3">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="14" column="12">
+              <widget class="QLabel" name="xbc">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="20" column="5">
+              <widget class="QLabel" name="xf5">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="15" column="0">
+              <widget class="QLabel" name="xc0">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="13">
+              <widget class="QLabel" name="x2d">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="15" column="10">
+              <widget class="QLabel" name="xca">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="9">
+              <widget class="QLabel" name="x79">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="13">
+              <widget class="QLabel" name="x5d">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="10" column="14">
+              <widget class="QLabel" name="x8e">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="10" column="6">
+              <widget class="QLabel" name="x86">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="15" column="1">
+              <widget class="QLabel" name="xc1">
+               <property name="text">
+                <string>00</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="18" column="7">
+              <widget class="QLabel" name="xd7">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="15" column="12">
+              <widget class="QLabel" name="xcc">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="14" column="14">
+              <widget class="QLabel" name="xbe">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QLabel" name="x21">
+               <property name="text">
+                <string>00</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLabel" name="x01">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="10" column="9">
+              <widget class="QLabel" name="x89">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="2">
+              <widget class="QLabel" name="x62">
+               <property name="text">
+                <string>00</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="15" column="9">
+              <widget class="QLabel" name="xc9">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="18" column="6">
+              <widget class="QLabel" name="xd6">
                <property name="text">
                 <string>00</string>
                </property>
@@ -2057,687 +2433,22 @@ border: none;
                </property>
               </widget>
              </item>
-             <item row="8" column="12">
-              <widget class="QLabel" name="x7c">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="6" column="15">
-              <widget class="QLabel" name="x5f">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="7">
-              <widget class="QLabel" name="x27">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="6" column="7">
-              <widget class="QLabel" name="x57">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="11" column="5">
-              <widget class="QLabel" name="x95">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="17" column="12">
-              <widget class="QLabel" name="xdc">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="9" column="0">
-              <widget class="QLabel" name="x80">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="8" column="8">
-              <widget class="QLabel" name="x78">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="18" column="7">
-              <widget class="QLabel" name="xe7">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="2">
-              <widget class="QLabel" name="x22">
-               <property name="text">
-                <string>00</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignmentFlag::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item row="19" column="9">
-              <widget class="QLabel" name="xf9">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="4" column="11">
-              <widget class="QLabel" name="x3b">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="14" column="1">
-              <widget class="QLabel" name="xc1">
-               <property name="text">
-                <string>00</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignmentFlag::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item row="11" column="13">
-              <widget class="QLabel" name="x9d">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="11" column="11">
-              <widget class="QLabel" name="x9b">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="4" column="13">
-              <widget class="QLabel" name="x3d">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="12" column="8">
-              <widget class="QLabel" name="xa8">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="8" column="3">
-              <widget class="QLabel" name="x73">
-               <property name="text">
-                <string>00</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignmentFlag::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item row="7" column="10">
-              <widget class="QLabel" name="x6a">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="12" column="12">
-              <widget class="QLabel" name="xac">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="18" column="11">
-              <widget class="QLabel" name="xeb">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="7" column="2">
-              <widget class="QLabel" name="x62">
-               <property name="text">
-                <string>00</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignmentFlag::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item row="13" column="7">
-              <widget class="QLabel" name="xb7">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="15">
-              <widget class="QLabel" name="x1f">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="18" column="3">
-              <widget class="QLabel" name="xe3">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="6" column="4">
-              <widget class="QLabel" name="x54">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="13" column="2">
-              <widget class="QLabel" name="xb2">
-               <property name="text">
-                <string>00</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignmentFlag::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item row="17" column="14">
-              <widget class="QLabel" name="xde">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="18" column="9">
-              <widget class="QLabel" name="xe9">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="14" column="0">
-              <widget class="QLabel" name="xc0">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="9" column="2">
-              <widget class="QLabel" name="x82">
-               <property name="text">
-                <string>00</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignmentFlag::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="15">
-              <widget class="QLabel" name="x2f">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="14" column="8">
-              <widget class="QLabel" name="xc8">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="14" column="3">
-              <widget class="QLabel" name="xc3">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="7" column="5">
-              <widget class="QLabel" name="x65">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="18" column="13">
-              <widget class="QLabel" name="xed">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="9" column="1">
-              <widget class="QLabel" name="x81">
-               <property name="text">
-                <string>00</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignmentFlag::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="4">
-              <widget class="QLabel" name="x14">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="8" column="15">
-              <widget class="QLabel" name="x7f">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="11" column="14">
-              <widget class="QLabel" name="x9e">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="19" column="5">
-              <widget class="QLabel" name="xf5">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="4" column="2">
-              <widget class="QLabel" name="x32">
-               <property name="text">
-                <string>00</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignmentFlag::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item row="11" column="6">
-              <widget class="QLabel" name="x96">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="9" column="9">
-              <widget class="QLabel" name="x89">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="9" column="13">
-              <widget class="QLabel" name="x8d">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="6" column="13">
-              <widget class="QLabel" name="x5d">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="5" column="12">
-              <widget class="QLabel" name="x4c">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="7" column="9">
-              <widget class="QLabel" name="x69">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="13" column="0">
-              <widget class="QLabel" name="xb0">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="11" column="12">
-              <widget class="QLabel" name="x9c">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="5" column="9">
-              <widget class="QLabel" name="x49">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="8" column="6">
-              <widget class="QLabel" name="x76">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="6" column="3">
-              <widget class="QLabel" name="x53">
-               <property name="text">
-                <string>00</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignmentFlag::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item row="18" column="2">
-              <widget class="QLabel" name="xe2">
-               <property name="text">
-                <string>00</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignmentFlag::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item row="17" column="4">
-              <widget class="QLabel" name="xd4">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="10">
-              <widget class="QLabel" name="x1a">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="13" column="1">
-              <widget class="QLabel" name="xb1">
-               <property name="text">
-                <string>00</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignmentFlag::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item row="4" column="6">
-              <widget class="QLabel" name="x36">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="13">
-              <widget class="QLabel" name="x2d">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="12" column="9">
-              <widget class="QLabel" name="xa9">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="13" column="6">
-              <widget class="QLabel" name="xb6">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="3">
-              <widget class="QLabel" name="x33">
-               <property name="text">
-                <string>00</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignmentFlag::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item row="7" column="15">
-              <widget class="QLabel" name="x6f">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="13" column="13">
-              <widget class="QLabel" name="xbd">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="5" column="14">
-              <widget class="QLabel" name="x4e">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="11" column="3">
-              <widget class="QLabel" name="x93">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="18" column="5">
-              <widget class="QLabel" name="xe5">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="6" column="11">
-              <widget class="QLabel" name="x5b">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="19" column="10">
-              <widget class="QLabel" name="xfa">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="1">
-              <widget class="QLabel" name="x21">
-               <property name="text">
-                <string>00</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignmentFlag::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item row="13" column="11">
-              <widget class="QLabel" name="xbb">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="19" column="4">
-              <widget class="QLabel" name="xf4">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="8">
-              <widget class="QLabel" name="x28">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="6">
-              <widget class="QLabel" name="x16">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="5" column="7">
-              <widget class="QLabel" name="x47">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="4" column="4">
-              <widget class="QLabel" name="x34">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="7" column="4">
-              <widget class="QLabel" name="x64">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="17" column="1">
-              <widget class="QLabel" name="xd1">
-               <property name="text">
-                <string>00</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignmentFlag::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item row="17" column="7">
-              <widget class="QLabel" name="xd7">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="13" column="4">
+             <item row="14" column="4">
               <widget class="QLabel" name="xb4">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="13" column="14">
-              <widget class="QLabel" name="xbe">
+             <item row="7" column="6">
+              <widget class="QLabel" name="x56">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="2" column="11">
-              <widget class="QLabel" name="x2b">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="14" column="13">
-              <widget class="QLabel" name="xcd">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="0">
-              <widget class="QLabel" name="x20">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="12" column="15">
-              <widget class="QLabel" name="xaf">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="9" column="11">
-              <widget class="QLabel" name="x8b">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="9" column="14">
-              <widget class="QLabel" name="x8e">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="8" column="10">
-              <widget class="QLabel" name="x7a">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="14" column="15">
-              <widget class="QLabel" name="xcf">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="0">
-              <widget class="QLabel" name="x00">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="1">
-              <widget class="QLabel" name="x01">
-               <property name="text">
-                <string>00</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="2">
-              <widget class="QLabel" name="x02">
+             <item row="5" column="6">
+              <widget class="QLabel" name="x36">
                <property name="text">
                 <string>00</string>
                </property>
@@ -2750,64 +2461,160 @@ border: none;
                </property>
               </widget>
              </item>
-             <item row="0" column="4">
-              <widget class="QLabel" name="x04">
+             <item row="6" column="9">
+              <widget class="QLabel" name="x49">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="0" column="5">
-              <widget class="QLabel" name="x05">
+             <item row="14" column="15">
+              <widget class="QLabel" name="xbf">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="0" column="6">
-              <widget class="QLabel" name="x06">
+             <item row="19" column="11">
+              <widget class="QLabel" name="xeb">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="0" column="7">
-              <widget class="QLabel" name="x07">
+             <item row="12" column="15">
+              <widget class="QLabel" name="x9f">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="0" column="8">
-              <widget class="QLabel" name="x08">
+             <item row="15" column="3">
+              <widget class="QLabel" name="xc3">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="0" column="9">
-              <widget class="QLabel" name="x09">
+             <item row="13" column="10">
+              <widget class="QLabel" name="xaa">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="0" column="10">
-              <widget class="QLabel" name="x0a">
+             <item row="19" column="8">
+              <widget class="QLabel" name="xe8">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="0" column="11">
-              <widget class="QLabel" name="x0b">
+             <item row="20" column="1">
+              <widget class="QLabel" name="xf1">
+               <property name="text">
+                <string>00</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="0">
+              <widget class="QLabel" name="x30">
                <property name="text">
                 <string>00</string>
                </property>
               </widget>
              </item>
-             <item row="0" column="12">
-              <widget class="QLabel" name="x0c">
+             <item row="18" column="11">
+              <widget class="QLabel" name="xdb">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="14" column="1">
+              <widget class="QLabel" name="xb1">
+               <property name="text">
+                <string>00</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="11">
+              <widget class="QLabel" name="x4b">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="12" column="1">
+              <widget class="QLabel" name="x91">
+               <property name="text">
+                <string>00</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="10" column="5">
+              <widget class="QLabel" name="x85">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QLabel" name="x00">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="14">
+              <widget class="QLabel" name="x2e">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="20" column="12">
+              <widget class="QLabel" name="xfc">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="13" column="2">
+              <widget class="QLabel" name="xa2">
+               <property name="text">
+                <string>00</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="15" column="13">
+              <widget class="QLabel" name="xcd">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="12" column="3">
+              <widget class="QLabel" name="x93">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="18" column="5">
+              <widget class="QLabel" name="xd5">
                <property name="text">
                 <string>00</string>
                </property>
@@ -2820,6 +2627,95 @@ border: none;
                </property>
               </widget>
              </item>
+             <item row="12" column="9">
+              <widget class="QLabel" name="x99">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="10" column="2">
+              <widget class="QLabel" name="x82">
+               <property name="text">
+                <string>00</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="0">
+              <widget class="QLabel" name="x50">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="2">
+              <widget class="QLabel" name="x72">
+               <property name="text">
+                <string>00</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="12" column="2">
+              <widget class="QLabel" name="x92">
+               <property name="text">
+                <string>00</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="15" column="8">
+              <widget class="QLabel" name="xc8">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="11">
+              <widget class="QLabel" name="x1b">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="1">
+              <widget class="QLabel" name="x51">
+               <property name="text">
+                <string>00</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="13" column="9">
+              <widget class="QLabel" name="xa9">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="8">
+              <widget class="QLabel" name="x08">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="0">
+              <widget class="QLabel" name="x60">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
              <item row="0" column="14">
               <widget class="QLabel" name="x0e">
                <property name="text">
@@ -2827,10 +2723,117 @@ border: none;
                </property>
               </widget>
              </item>
-             <item row="0" column="15">
-              <widget class="QLabel" name="x0f">
+             <item row="19" column="13">
+              <widget class="QLabel" name="xed">
                <property name="text">
                 <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="2">
+              <widget class="QLabel" name="x12">
+               <property name="text">
+                <string>00</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="10">
+              <widget class="QLabel" name="x3a">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="14" column="0">
+              <widget class="QLabel" name="xb0">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="20" column="0">
+              <widget class="QLabel" name="xf0">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="7">
+              <widget class="QLabel" name="x17">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="19" column="4">
+              <widget class="QLabel" name="xe4">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="6">
+              <widget class="QLabel" name="x46">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="19" column="6">
+              <widget class="QLabel" name="xe6">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="13" column="13">
+              <widget class="QLabel" name="xad">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="19" column="7">
+              <widget class="QLabel" name="xe7">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="13" column="8">
+              <widget class="QLabel" name="xa8">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="5">
+              <widget class="QLabel" name="x35">
+               <property name="text">
+                <string>00</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="3">
+              <widget class="QLabel" name="x33">
+               <property name="text">
+                <string>00</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="3">
+              <widget class="QLabel" name="x23">
+               <property name="text">
+                <string>00</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignmentFlag::AlignCenter</set>
                </property>
               </widget>
              </item>
@@ -2861,28 +2864,6 @@ border:none;
        <enum>QFrame::Shadow::Raised</enum>
       </property>
       <layout class="QGridLayout" name="gridLayout_14">
-       <item row="1" column="0">
-        <widget class="QLabel" name="outputScreen">
-         <property name="font">
-          <font>
-           <pointsize>15</pointsize>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QLabel{
-border: 2px solid rgb(50,12,100);
-color:#000;
-}</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignmentFlag::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
        <item row="0" column="0">
         <widget class="QLabel" name="label_4">
          <property name="maximumSize">
@@ -2902,6 +2883,29 @@ color:#000;
          </property>
          <property name="alignment">
           <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QTextBrowser" name="outputScreen">
+         <property name="font">
+          <font>
+           <pointsize>15</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: 2px solid rgb(50,12,100);</string>
+         </property>
+         <property name="html">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:15pt; font-weight:700; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
         </widget>
        </item>
@@ -2953,6 +2957,7 @@ border:none;
          <property name="font">
           <font>
            <pointsize>15</pointsize>
+           <bold>true</bold>
           </font>
          </property>
          <property name="cursor" stdset="0">
@@ -3012,8 +3017,7 @@ border:none;
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">border: 2px solid rgb(50,12,100);
-</string>
+          <string notr="true">border: 2px solid rgb(50,12,100);</string>
          </property>
          <property name="html">
           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;

@@ -219,23 +219,34 @@ string Instructions::implicitNormalization(double Dec_Number) {
 }
 
 double Instructions::encodeImplicitNormalization(string hexNumber) {
-    string binary = decimalToBinary(hexaToDecimal(hexNumber));
-    // Calculate the exponent and the mantissa.
+    int decimalValue = hexaToDecimal(hexNumber);
+    if (decimalValue == 0) return 0.0; // Handle zero case explicitly
+
+    string binary = decimalToBinary(decimalValue);
+
+    if (binary.length() < 8) {
+        throw runtime_error("Binary representation is too short!");
+    }
+
     int exponent = binaryToDecimal(binary.substr(1, 3));
     int power = exponent - 4;
     double mantissaPart = stod("1." + binary.substr(4, 4));
     double result = mantissaPart * pow(10, power);
-    // If it is negative, make it negative. Else, make it positive.
-    // Return the result.
+
     return binary[0] == '1' ? -binaryToDecimalFraction(to_string(result)) : binaryToDecimalFraction(to_string(result));
 }
 
 void Instructions::addingFloatingNumber(string &address1, string &address2, string &address3, Register &reg) {
     double valReg1 = encodeImplicitNormalization(reg.getRegister(address2));
     double valReg2 = encodeImplicitNormalization(reg.getRegister(address3));
-    // Calculate the sum of the two floating numbers.
+
     double temp = valReg1 + valReg2;
-    // Normalize the result.
+
+    if (temp == 0.0) {
+        reg.setRegister(address1, "0"); // Explicitly handle zero case
+        return;
+    }
+
     int tempResult = binaryToDecimal(implicitNormalization(temp));
     reg.setRegister(address1, decimalToHexa(tempResult));
 }
@@ -355,8 +366,7 @@ bool Instructions::compareTwosComplement(const std::string &bin1, const std::str
     return false; // bin1 and bin2 are equal
 }
 
-int Instructions::conditionalJumpGreater(const string &address1, int XY, Register &reg, Memory &mem,
-                                         int& currentProgramCounter,bool& ff) {
+int Instructions::conditionalJumpGreater(const string &address1, int XY, Register &reg, Memory &mem,int& currentProgramCounter,bool& ff) {
     string value1 = reg.getRegister(address1);
     // Convert the hexadecimal value to decimal
     int num1 = stoi(value1, nullptr, 16);

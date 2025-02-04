@@ -148,6 +148,8 @@ void MainWindow::on_loadFile_clicked()
                 }
             }
 
+            validInst.push_back("C000");
+
             // Set the valid instructions
             instructions.setInstructions(validInst);
             memory.setInstructions(validInst);
@@ -172,13 +174,19 @@ void MainWindow::on_runStep_clicked()
     ui->runStep->setEnabled(false);
     ui->runAll->setEnabled(false);
 
+    string instruction;
     rr = 0;
     int counter = memory.getCounter();
     bool flag = instructions.getHalted();
 
     while (counter <= 255 && !flag) {
-        string instruction = memory.getInstruction();
+        instruction = memory.getInstruction();
         if (instruction == "0000") {
+            instruction = "C000";
+            displayMemory();
+            displayRegister();
+            QString centeredInstruction = "<div style='text-align: center;'>" + QString::fromStdString(instruction) + "</div>";
+            ui->currentInstruction->append(centeredInstruction);
             break;
         }
 
@@ -201,7 +209,8 @@ void MainWindow::on_runStep_clicked()
             instructions.store(address1, address4, regist, memory);
             if (address4 == "00") {                 // Display what shows on screen
                 std::string hex = memory.getMemory(0);
-                ui->outputScreen->setText(QString::fromStdString(hex));
+                QString display = "<div style='text-align: center;'>" + QString::fromStdString(hex) + "</div>";
+                ui->outputScreen->append(display);
             }
         } else if (num == "4") {
             instructions.move(address2, address3, regist);
@@ -237,6 +246,14 @@ void MainWindow::on_runStep_clicked()
         displayRegister();
         delay(1000);
     }
+
+    if (counter > 255){
+        instruction = "C000";
+        displayMemory();
+        displayRegister();
+        QString centeredInstruction = "<div style='text-align: center;'>" + QString::fromStdString(instruction) + "</div>";
+        ui->currentInstruction->append(centeredInstruction);
+    }
 }
 
 void MainWindow::on_runAll_clicked(){
@@ -247,13 +264,19 @@ void MainWindow::on_runAll_clicked(){
     int maxIterations = 1000;
     int iterationCount = 0;
 
+    string instruction;
     while (counter <= 255 && !flag) {
         if (++iterationCount > maxIterations) {
             break;
         }
 
-        string instruction = memory.getInstruction();
+        instruction = memory.getInstruction();
         if (instruction.empty() || instruction.length() != 4 || instruction == "0000") {
+            instruction = "C000";
+            displayMemory();
+            displayRegister();
+            QString centeredInstruction = "<div style='text-align: center;'>" + QString::fromStdString(instruction) + "</div>";
+            ui->currentInstruction->append(centeredInstruction);
             break;
         }
 
@@ -276,7 +299,8 @@ void MainWindow::on_runAll_clicked(){
             instructions.store(address1, address4, regist, memory);
             if (address4 == "00") {                 // Display what shows on screen
                 std::string hex = memory.getMemory(0);
-                ui->outputScreen->setText(QString::fromStdString(hex));
+                QString display = "<div style='text-align: center;'>" + QString::fromStdString(hex) + "</div>";
+                ui->outputScreen->append(display);
             }
         } else if (num == "4") {
             instructions.move(address2, address3, regist);
@@ -311,6 +335,14 @@ void MainWindow::on_runAll_clicked(){
         memory.setCounter(counter + 2);
         counter = memory.getCounter();
         flag = instructions.getHalted();
+    }
+
+    if (counter > 255){
+        instruction = "C000";
+        displayMemory();
+        displayRegister();
+        QString centeredInstruction = "<div style='text-align: center;'>" + QString::fromStdString(instruction) + "</div>";
+        ui->currentInstruction->append(centeredInstruction);
     }
 
     displayMemory();
@@ -373,6 +405,7 @@ void MainWindow::displayMemory(){
         }
     }
 }
+
 void MainWindow::displayRegister(){
     ui->r0->setText(QString::fromStdString(regist.getRegister("0")));
     ui->r1->setText(QString::fromStdString(regist.getRegister("1")));
