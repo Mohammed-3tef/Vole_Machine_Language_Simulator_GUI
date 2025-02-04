@@ -11,7 +11,6 @@
   - [📥 Installation](#-installation)
   - [📥 Download the Latest Release](#-download-the-latest-release)
 - [📌 Usage](#-usage)
-- [📁 Project Structure](#-project-structure)
 - [🤝 Contributing](#-contributing)
 - [🌟 Acknowledgments](#-acknowledgments)
 - [🖥️ Console Version](#️-console-version)
@@ -49,6 +48,8 @@ The Vole Machine Language Simulator GUI is a graphical application designed to s
 | D      | RXY    | **JUMP** to instruction in RAM cell XY if the content of register R is greater than (>) the content of register 0. Data is interpreted as integers in two's complement notation. |
 
 ## 🖼️ Screenshots
+
+![VMLS](https://github.com/user-attachments/assets/5297f5e2-3db7-4a7f-b894-b548b44da159)
 
 
 ## 🛠️ Getting Started
@@ -100,9 +101,6 @@ Visit the release page to download the precompiled binaries for your system. Ext
    - 'Run One Cycle': Execute a single instruction cycle.
    - 'Run Until Halt': Continuously execute instructions until a halt condition is met.
 5. **Reset and Clear**: Options are available to reset the program counter or clear memory and registers as needed.
-
-## 📁 Project Structure
-
 
 ## 🤝 Contributing
 
