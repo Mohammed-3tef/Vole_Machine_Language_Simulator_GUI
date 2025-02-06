@@ -49,7 +49,7 @@ void MainWindow::on_loadInput_clicked()
     int counter;
     if  (flag) counter = memory.getCounter();
     else counter = ui->counter->value();
-    if (counter == 0) QMessageBox::warning(this, tr("Error"), tr("You must declare a poositive value for program counter!"));
+    if (counter == 0) QMessageBox::warning(this, tr("Error"), tr("You must declare a positive value for program counter!"));
     else
     {
         if (counter > 256){
@@ -124,7 +124,7 @@ void MainWindow::on_loadFile_clicked()
     int counter;
     if  (flag) counter = memory.getCounter();
     else counter = ui->counter->value();
-    if (counter == 0) QMessageBox::warning(this, tr("Error"), tr("You must declare a poositive value for program counter!"));
+    if (counter == 0) QMessageBox::warning(this, tr("Error"), tr("You must declare a positive value for program counter!"));
     else
     {
         if (counter > 256){
