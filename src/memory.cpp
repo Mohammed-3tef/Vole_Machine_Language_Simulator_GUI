@@ -42,11 +42,11 @@ void Memory::setCounter(int n){
     counter = n;
 }
 
-void Memory::setInstructions(vector<string>instruct){
+void Memory::setInstructions(vector<string>instruct, int count){
     int c = counter;
 
     // Load the program into the memory.
-    for (int i = 0; i < instruct.size(); ++i) {
+    for (int i = 0; i < int(instruct.size()); ++i) {
         memory[c] = instruct[i].substr(0, 2);
         ++c;
         memory[c] = instruct[i].substr(2);

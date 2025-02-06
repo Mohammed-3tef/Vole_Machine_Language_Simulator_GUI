@@ -39,10 +39,11 @@ public:
 
     void halt();
     bool getHalted(){return halted;}
+    void setHalted(bool ff){halted = ff;}
     void rotateRight(const string& address1, int X, Register& reg);
     int conditionalJump(const string& address1, int XY, Register& reg,Memory& mem, int& currentProgramCounter,bool& ff);
     void exclusiveOr(const string& address1, const string& address2, const string& address3, Register& reg);
-    int conditionalJumpGreater(const string& address1, int XY, Register& reg,Memory& mem, int& currentProgramCounter,bool& ff);
+    int conditionalJumpGreater(const string& address1, int XY, Register& reg, int& currentProgramCounter,bool& ff);
     bool compareTwosComplement(const std::string &bin1, const std::string &bin2);
 };
 

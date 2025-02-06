@@ -366,12 +366,12 @@ bool Instructions::compareTwosComplement(const std::string &bin1, const std::str
     return false; // bin1 and bin2 are equal
 }
 
-int Instructions::conditionalJumpGreater(const string &address1, int XY, Register &reg, Memory &mem,int& currentProgramCounter,bool& ff) {
+int Instructions::conditionalJumpGreater(const string &address1, int XY, Register &reg,int& currentProgramCounter,bool& ff) {
     string value1 = reg.getRegister(address1);
     // Convert the hexadecimal value to decimal
     int num1 = stoi(value1, nullptr, 16);
     // Create a 16-bit bitset from the decimal value
-    bitset<16> bits(num1);
+    bitset<8> bits(num1);
     // Convert the bitset to a binary string representation
     string binaryString = bits.to_string();
 
@@ -379,7 +379,7 @@ int Instructions::conditionalJumpGreater(const string &address1, int XY, Registe
     // Convert the hexadecimal value to decimal
     int num2 = stoi(value2, nullptr, 16);
     // Create a 16-bit bitset from the decimal value
-    bitset<16> bits2(num2);
+    bitset<8> bits2(num2);
     // Convert the bitset to a binary string representation
     string binaryString2 = bits2.to_string();
 

@@ -7,14 +7,14 @@ using namespace std;
 class Memory {
 private:
     std::array<string , 256> memory;
-    int counter = 0;
+    int counter = 1;
 public:
     Memory();
     string getMemory(int address);
     void setMemory(int address, string value);
     bool checkDecimal(const string& str);
     string getInstruction ();
-    void setInstructions(vector<string>instruct);
+    void setInstructions(vector<string>instruct, int count);
     int getCounter();
     void setCounter(int n);
 };

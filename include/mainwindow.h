@@ -32,6 +32,8 @@ private slots:
     void displayRegister();
     void displayMemory();
 
+    void on_loadNewProgram_clicked();
+
 private:
     Ui::MainWindow *ui;
     Help* help;

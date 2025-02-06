@@ -12,7 +12,7 @@
 using namespace std;
 
 int number = 0;
-int rr = 0;
+bool flag = false;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -22,6 +22,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     ui->runAll->setEnabled(false);
     ui->runStep->setEnabled(false);
+    ui->loadNewProgram->setEnabled(false);
 }
 
 MainWindow::~MainWindow()
@@ -45,77 +46,23 @@ void delay(int milliseconds) {
 
 void MainWindow::on_loadInput_clicked()
 {
-    // Check validity of instructions
-    if (!ui->inputInstructions->toPlainText().isEmpty()) {
-        vector<string> inst;
-        QString file = ui->inputInstructions->toPlainText();
-        string fileContent = file.toStdString();
-
-        for (int i = 0; i < int(fileContent.size()); ++i) {
-            fileContent[i] = toupper(fileContent[i]);
+    int counter;
+    if  (flag) counter = memory.getCounter();
+    else counter = ui->counter->value();
+    if (counter == 0) QMessageBox::warning(this, tr("Error"), tr("You must declare a poositive value for program counter!"));
+    else
+    {
+        if (counter > 256){
+            QMessageBox::warning(this, tr("Error"), tr("The memory is full! You should clear it."));
+            return;
         }
 
-        // Remove spaces and newlines from the fileContent in a single pass
-        fileContent.erase(remove_if(fileContent.begin(), fileContent.end(),
-                                    [](char c) { return c == ' ' || c == '\n'; }),
-                          fileContent.end());
-
-        // Put every 4 characters in an index in the vector
-        for (int i = 0; i < int(fileContent.size()); i += 4) {
-            inst.push_back(fileContent.substr(i, 4));
-        }
-
-        // Filter out invalid instructions
-        vector<string> validInst;
-        for (int i = 0; i < int(inst.size()); ++i) {
-            bool valid = true;
-            for (int j = 0; j < 4; ++j) {
-                // Check the validity of each character in each instruction
-                if (inst[i][j] < 48 || (inst[i][j] > 57 && inst[i][j] < 65) ||
-                    (inst[i][j] > 70 && inst[i][j] < 97) || inst[i][j] > 102) {
-                    valid = false;
-                    break;
-                }
-            }
-            if (valid) {
-                validInst.push_back(inst[i]);
-            }
-        }
-
-        validInst.push_back("C000");
-
-        // Set the valid instructions
-        instructions.setInstructions(validInst);
-        memory.setInstructions(validInst);
-
-        // Clear and disable UI elements
-        ui->inputInstructions->clear();
-        ui->inputInstructions->setEnabled(false);
-        ui->loadInput->setEnabled(false);
-        ui->loadFile->setEnabled(false);
-        ui->runAll->setEnabled(true);
-        ui->runStep->setEnabled(true);
-    }
-}
-
-
-void MainWindow::on_loadFile_clicked()
-{
-    // get the file
-    QString fileName = QFileDialog::getOpenFileName(
-        this,
-        tr("Open File"),
-        "C://",
-        "Text File (*.txt)"
-        );
-
-    if (!fileName.isEmpty()) {
-        QFile file(fileName);
-        if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-            QTextStream in(&file);
-            QString qfile = in.readAll(); // Read entire file into a QString
+        memory.setCounter(counter);
+        // Check validity of instructions
+        if (!ui->inputInstructions->toPlainText().isEmpty()) {
             vector<string> inst;
-            string fileContent = qfile.toStdString();
+            QString file = ui->inputInstructions->toPlainText();
+            string fileContent = file.toStdString();
 
             for (int i = 0; i < int(fileContent.size()); ++i) {
                 fileContent[i] = toupper(fileContent[i]);
@@ -148,38 +95,134 @@ void MainWindow::on_loadFile_clicked()
                 }
             }
 
-            validInst.push_back("C000");
+           if (validInst.back() != "C000") validInst.push_back("C000");
+
+           if (counter + (2*validInst.size()) > 256) {
+               QMessageBox::warning(this, tr("Error"), tr("The memory is full! You should clear it."));
+               return;
+           }
 
             // Set the valid instructions
             instructions.setInstructions(validInst);
-            memory.setInstructions(validInst);
+            memory.setInstructions(validInst,counter);
 
-
-            file.close();
-        } else {
-            QMessageBox::warning(this, tr("Error"), tr("Could not open file"));
+            // Clear and disable UI elements
+            ui->inputInstructions->clear();
+            ui->inputInstructions->setEnabled(false);
+            ui->loadInput->setEnabled(false);
+            ui->loadFile->setEnabled(false);
+            ui->runAll->setEnabled(true);
+            ui->runStep->setEnabled(true);
+            ui->counter->setReadOnly(true);
         }
     }
+}
 
-    ui->inputInstructions->clear();
-    ui->inputInstructions->setEnabled(false);
-    ui->loadInput->setEnabled(false);
-    ui->loadFile->setEnabled(false);
-    ui->runAll->setEnabled(true);
-    ui->runStep->setEnabled(true);
+
+void MainWindow::on_loadFile_clicked()
+{
+    int counter;
+    if  (flag) counter = memory.getCounter();
+    else counter = ui->counter->value();
+    if (counter == 0) QMessageBox::warning(this, tr("Error"), tr("You must declare a poositive value for program counter!"));
+    else
+    {
+        if (counter > 256){
+            QMessageBox::warning(this, tr("Error"), tr("The memory is full! You should clear it."));
+            return;
+        }
+        memory.setCounter(counter);
+        // get the file
+        QString fileName = QFileDialog::getOpenFileName(
+            this,
+            tr("Open File"),
+            "C://",
+            "Text File (*.txt)"
+            );
+
+        if (!fileName.isEmpty()) {
+            QFile file(fileName);
+            if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+                QTextStream in(&file);
+                QString qfile = in.readAll(); // Read entire file into a QString
+                vector<string> inst;
+                string fileContent = qfile.toStdString();
+
+                for (int i = 0; i < int(fileContent.size()); ++i) {
+                    fileContent[i] = toupper(fileContent[i]);
+                }
+
+                // Remove spaces and newlines from the fileContent in a single pass
+                fileContent.erase(remove_if(fileContent.begin(), fileContent.end(),
+                                            [](char c) { return c == ' ' || c == '\n'; }),
+                                  fileContent.end());
+
+                // Put every 4 characters in an index in the vector
+                for (int i = 0; i < int(fileContent.size()); i += 4) {
+                    inst.push_back(fileContent.substr(i, 4));
+                }
+
+                // Filter out invalid instructions
+                vector<string> validInst;
+                for (int i = 0; i < int(inst.size()); ++i) {
+                    bool valid = true;
+                    for (int j = 0; j < 4; ++j) {
+                        // Check the validity of each character in each instruction
+                        if (inst[i][j] < 48 || (inst[i][j] > 57 && inst[i][j] < 65) ||
+                            (inst[i][j] > 70 && inst[i][j] < 97) || inst[i][j] > 102) {
+                            valid = false;
+                            break;
+                        }
+                    }
+                    if (valid) {
+                        validInst.push_back(inst[i]);
+                    }
+                }
+                if (validInst.back() != "C000") validInst.push_back("C000");
+
+
+                if (counter + (2*validInst.size()) > 256) {
+                    QMessageBox::warning(this, tr("Error"), tr("The memory is full! You should clear it."));
+                    return;
+                }
+
+                // Set the valid instructions
+                instructions.setInstructions(validInst);
+                memory.setInstructions(validInst,counter);
+
+                ui->inputInstructions->clear();
+                ui->inputInstructions->setEnabled(false);
+                ui->loadInput->setEnabled(false);
+                ui->loadFile->setEnabled(false);
+                ui->runAll->setEnabled(true);
+                ui->runStep->setEnabled(true);
+                ui->counter->setReadOnly(true);
+                file.close();
+            } else {
+                QMessageBox::warning(this, tr("Error"), tr("Could not open file"));
+            }
+        }
+    }
 }
 
 void MainWindow::on_runStep_clicked()
 {
+    if(flag) {
+        std::string instruction = "\nNew Program";
+        QString centeredInstruction = "<div style='text-align: center;'>" + QString::fromStdString(instruction) + "</div>";
+        ui->currentInstruction->append(centeredInstruction);
+    }
+
+    int counter = memory.getCounter();
     ui->runStep->setEnabled(false);
     ui->runAll->setEnabled(false);
 
     string instruction;
-    rr = 0;
-    int counter = memory.getCounter();
-    bool flag = instructions.getHalted();
+    flag = false;
+    instructions.setHalted(false);
 
     while (counter <= 255 && !flag) {
+        counter = memory.getCounter();
         instruction = memory.getInstruction();
         if (instruction == "0000") {
             instruction = "C000";
@@ -234,13 +277,18 @@ void MainWindow::on_runStep_clicked()
         } else if (num == "C" || num == "c") {
             instructions.halt();
         } else if (num == "D" || num == "d") {
-            XY = stoi(address4, nullptr, 16);
-            counter = instructions.conditionalJumpGreater(address1, XY, regist, memory, counter, ff);
-            if (ff) counter -= 2;
+            if (address4 != "FF") {
+                XY = stoi(address4, nullptr, 16);
+                counter = instructions.conditionalJumpGreater(address1, XY, regist, counter, ff);
+                if (ff) counter -= 2;
+            }
         }
         memory.setCounter(counter + 2);
         counter = memory.getCounter();
         flag = instructions.getHalted();
+
+        QString displayCounter = "<div style='text-align: center;'>" + QString::number(counter) + "</div>";
+        ui->displayConter->setText(displayCounter);
 
         displayMemory();
         displayRegister();
@@ -254,18 +302,37 @@ void MainWindow::on_runStep_clicked()
         QString centeredInstruction = "<div style='text-align: center;'>" + QString::fromStdString(instruction) + "</div>";
         ui->currentInstruction->append(centeredInstruction);
     }
+    ui->loadNewProgram->setEnabled(true);
+    flag = true;
+    memory.setCounter(counter+2);
+
+    if (counter <= 254){
+        QString displayCounter = "<div style='text-align: center;'>" + QString::number(counter+2) + "</div>";
+        ui->displayConter->setText(displayCounter);
+    }
+    else{
+        QString displayCounter = "<div style='text-align: center;'>" + QString::number(counter) + "</div>";
+        ui->displayConter->setText(displayCounter);
+    }
 }
 
-void MainWindow::on_runAll_clicked(){
-    rr = 0;
-    int counter = memory.getCounter();
-    bool flag = instructions.getHalted();
+void MainWindow::on_runAll_clicked()
+{
+    if(flag) {
+        std::string instruction = "\nNew Program";
+        QString centeredInstruction = "<div style='text-align: center;'>" + QString::fromStdString(instruction) + "</div>";
+        ui->currentInstruction->append(centeredInstruction);
+    }
 
+    int counter = memory.getCounter();
+    flag = false;
+    instructions.setHalted(false);
     int maxIterations = 1000;
     int iterationCount = 0;
 
     string instruction;
     while (counter <= 255 && !flag) {
+        counter = memory.getCounter();
         if (++iterationCount > maxIterations) {
             break;
         }
@@ -325,9 +392,11 @@ void MainWindow::on_runAll_clicked(){
             instructions.halt();
             break;
         } else if (num == "D" || num == "d") {
-            XY = stoi(address4, nullptr, 16);
-            counter = instructions.conditionalJumpGreater(address1, XY, regist, memory, counter, ff);
-            if (ff) counter -= 2;
+            if (address4 != "FF") {
+                XY = stoi(address4, nullptr, 16);
+                counter = instructions.conditionalJumpGreater(address1, XY, regist, counter, ff);
+                if (ff) counter -= 2;
+            }
         } else {
             break;
         }
@@ -345,10 +414,22 @@ void MainWindow::on_runAll_clicked(){
         ui->currentInstruction->append(centeredInstruction);
     }
 
+    if (counter <= 254){
+        QString displayCounter = "<div style='text-align: center;'>" + QString::number(counter+2) + "</div>";
+        ui->displayConter->setText(displayCounter);
+    }
+    else{
+        QString displayCounter = "<div style='text-align: center;'>" + QString::number(counter) + "</div>";
+        ui->displayConter->setText(displayCounter);
+    }
+
+    memory.setCounter(counter+2);
     displayMemory();
     displayRegister();
     ui->runStep->setEnabled(false);
     ui->runAll->setEnabled(false);
+    ui->loadNewProgram->setEnabled(true);
+    flag = true;
 }
 
 
@@ -367,8 +448,13 @@ void MainWindow::on_clear_clicked()
     ui->loadFile->setEnabled(true);
     ui->outputScreen->clear();
     ui->currentInstruction->clear();
+    ui->displayConter->clear();
+    ui->inputInstructions->clear();
+    ui->counter->setValue(0);
+    ui->counter->setReadOnly(false);
+    ui->loadNewProgram->setEnabled(false);
     number = 0;
-    rr = 0;
+    flag = false;
 
     for (int i = 0; i < 256; i++) {
         QString labelName = QString("x%1").arg(i, 2, 16, QChar('0')).toLower();
@@ -394,6 +480,15 @@ void MainWindow::on_clear_clicked()
     ui->rd->setText("00");
     ui->re->setText("00");
     ui->rf->setText("00");
+}
+
+void MainWindow::on_loadNewProgram_clicked()
+{
+    ui->runStep->setEnabled(false);
+    ui->runAll->setEnabled(false);
+    ui->inputInstructions->setEnabled(true);
+    ui->loadInput->setEnabled(true);
+    ui->loadFile->setEnabled(true);
 }
 
 void MainWindow::displayMemory(){

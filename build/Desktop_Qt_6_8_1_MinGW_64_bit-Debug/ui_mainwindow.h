@@ -16,6 +16,7 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpinBox>
 #include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QWidget>
@@ -27,6 +28,38 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QGridLayout *gridLayout;
+    QFrame *frame_11;
+    QGridLayout *gridLayout_2;
+    QPushButton *runStep;
+    QPushButton *loadFile;
+    QPushButton *loadInput;
+    QPushButton *clear;
+    QPushButton *help;
+    QPushButton *runAll;
+    QPushButton *loadNewProgram;
+    QFrame *frame_14;
+    QGridLayout *gridLayout_17;
+    QFrame *frame_7;
+    QGridLayout *gridLayout_14;
+    QTextBrowser *outputScreen;
+    QLabel *label_4;
+    QWidget *widget_12;
+    QGridLayout *gridLayout_16;
+    QFrame *frame_12;
+    QGridLayout *gridLayout_18;
+    QTextBrowser *displayConter;
+    QSpinBox *counter;
+    QLabel *label_5;
+    QFrame *frame_13;
+    QGridLayout *gridLayout_15;
+    QFrame *frame_10;
+    QGridLayout *gridLayout_12;
+    QLabel *label_3;
+    QTextEdit *inputInstructions;
+    QFrame *frame_8;
+    QGridLayout *gridLayout_13;
+    QTextBrowser *currentInstruction;
+    QLabel *label_7;
     QLabel *label;
     QFrame *Register;
     QGridLayout *gridLayout_8;
@@ -368,32 +401,12 @@ public:
     QLabel *x35;
     QLabel *x33;
     QLabel *x23;
-    QFrame *frame_7;
-    QGridLayout *gridLayout_14;
-    QLabel *label_4;
-    QTextBrowser *outputScreen;
-    QFrame *frame_10;
-    QGridLayout *gridLayout_12;
-    QLabel *label_3;
-    QTextEdit *inputInstructions;
-    QFrame *frame_8;
-    QGridLayout *gridLayout_13;
-    QLabel *label_7;
-    QTextBrowser *currentInstruction;
-    QFrame *frame_11;
-    QGridLayout *gridLayout_2;
-    QPushButton *help;
-    QPushButton *loadInput;
-    QPushButton *runStep;
-    QPushButton *clear;
-    QPushButton *runAll;
-    QPushButton *loadFile;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(1397, 1072);
+        MainWindow->resize(1438, 1072);
         MainWindow->setStyleSheet(QString::fromUtf8("QMainWindow {\n"
 "	background-color: rgb(18, 20, 32);\n"
 "	color : rgb(224, 225, 221);\n"
@@ -411,20 +424,407 @@ public:
         centralwidget->setObjectName("centralwidget");
         gridLayout = new QGridLayout(centralwidget);
         gridLayout->setObjectName("gridLayout");
+        frame_11 = new QFrame(centralwidget);
+        frame_11->setObjectName("frame_11");
+        frame_11->setMaximumSize(QSize(16777215, 70));
+        frame_11->setStyleSheet(QString::fromUtf8("QFrame{	\n"
+"	background-color: rgb(18, 20, 32);\n"
+"}"));
+        gridLayout_2 = new QGridLayout(frame_11);
+        gridLayout_2->setObjectName("gridLayout_2");
+        gridLayout_2->setHorizontalSpacing(10);
+        gridLayout_2->setVerticalSpacing(0);
+        gridLayout_2->setContentsMargins(15, 0, 15, 0);
+        runStep = new QPushButton(frame_11);
+        runStep->setObjectName("runStep");
+        runStep->setMinimumSize(QSize(190, 50));
+        QFont font;
+        font.setPointSize(15);
+        font.setBold(true);
+        runStep->setFont(font);
+        runStep->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        runStep->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	background-color: rgb(65, 90, 119);\n"
+"	color: rgb(224, 225, 221);\n"
+"    border-radius: 10px;\n"
+"    padding: 0 2.5px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"	background-color: rgb(119, 141, 169);\n"
+"	color: rgb(224, 225, 221);\n"
+"}\n"
+"\n"
+"QPushButton:disabled {\n"
+"	background-color: rgb(27, 38, 59);\n"
+"	color: rgb(224, 225, 221);\n"
+"}"));
+
+        gridLayout_2->addWidget(runStep, 0, 3, 1, 1);
+
+        loadFile = new QPushButton(frame_11);
+        loadFile->setObjectName("loadFile");
+        loadFile->setMinimumSize(QSize(190, 50));
+        loadFile->setFont(font);
+        loadFile->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        loadFile->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	background-color: rgb(65, 90, 119);\n"
+"	color: rgb(224, 225, 221);\n"
+"    border-radius: 10px;\n"
+"    padding: 0 2.5px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"	background-color: rgb(119, 141, 169);\n"
+"	color: rgb(224, 225, 221);\n"
+"}\n"
+"\n"
+"QPushButton:disabled {\n"
+"	background-color: rgb(27, 38, 59);\n"
+"	color: rgb(224, 225, 221);\n"
+"}"));
+
+        gridLayout_2->addWidget(loadFile, 0, 2, 1, 1);
+
+        loadInput = new QPushButton(frame_11);
+        loadInput->setObjectName("loadInput");
+        loadInput->setMinimumSize(QSize(190, 50));
+        loadInput->setFont(font);
+        loadInput->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        loadInput->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	background-color: rgb(65, 90, 119);\n"
+"	color: rgb(224, 225, 221);\n"
+"    border-radius: 10px;\n"
+"    padding: 0 2.5px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"	background-color: rgb(119, 141, 169);\n"
+"	color: rgb(224, 225, 221);\n"
+"}\n"
+"\n"
+"QPushButton:disabled {\n"
+"	background-color: rgb(27, 38, 59);\n"
+"	color: rgb(224, 225, 221);\n"
+"}"));
+
+        gridLayout_2->addWidget(loadInput, 0, 1, 1, 1);
+
+        clear = new QPushButton(frame_11);
+        clear->setObjectName("clear");
+        clear->setMinimumSize(QSize(190, 50));
+        clear->setMaximumSize(QSize(16777215, 16777215));
+        clear->setFont(font);
+        clear->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        clear->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	background-color: rgb(65, 90, 119);\n"
+"	color: rgb(224, 225, 221);\n"
+"    border-radius: 10px;\n"
+"    padding: 0 2.5px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"	\n"
+"	background-color: rgb(200, 64, 64);\n"
+"	color: rgb(224, 225, 221);\n"
+"}"));
+
+        gridLayout_2->addWidget(clear, 0, 6, 1, 1);
+
+        help = new QPushButton(frame_11);
+        help->setObjectName("help");
+        help->setMinimumSize(QSize(190, 50));
+        help->setFont(font);
+        help->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        help->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	background-color: rgb(65, 90, 119);\n"
+"	color: rgb(224, 225, 221);\n"
+"    border-radius: 10px;\n"
+"    padding: 0 2.5px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"	background-color: rgb(119, 141, 169);\n"
+"	color: rgb(224, 225, 221);\n"
+"}\n"
+"\n"
+"QPushButton:disabled {\n"
+"	background-color: rgb(27, 38, 59);\n"
+"	color: rgb(224, 225, 221);\n"
+"}"));
+
+        gridLayout_2->addWidget(help, 0, 0, 1, 1);
+
+        runAll = new QPushButton(frame_11);
+        runAll->setObjectName("runAll");
+        runAll->setMinimumSize(QSize(190, 50));
+        runAll->setFont(font);
+        runAll->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
+        runAll->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	background-color: rgb(65, 90, 119);\n"
+"	color: rgb(224, 225, 221);\n"
+"    border-radius: 10px;\n"
+"    padding: 0 2.5px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"	background-color: rgb(119, 141, 169);\n"
+"	color: rgb(224, 225, 221);\n"
+"}\n"
+"\n"
+"QPushButton:disabled {\n"
+"	background-color: rgb(27, 38, 59);\n"
+"	color: rgb(224, 225, 221);\n"
+"}"));
+
+        gridLayout_2->addWidget(runAll, 0, 4, 1, 1);
+
+        loadNewProgram = new QPushButton(frame_11);
+        loadNewProgram->setObjectName("loadNewProgram");
+        loadNewProgram->setMinimumSize(QSize(190, 50));
+        loadNewProgram->setFont(font);
+        loadNewProgram->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"	background-color: rgb(65, 90, 119);\n"
+"	color: rgb(224, 225, 221);\n"
+"    border-radius: 10px;\n"
+"    padding: 0 2.5px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"	background-color: rgb(119, 141, 169);\n"
+"	color: rgb(224, 225, 221);\n"
+"}\n"
+"\n"
+"QPushButton:disabled {\n"
+"	background-color: rgb(27, 38, 59);\n"
+"	color: rgb(224, 225, 221);\n"
+"}"));
+
+        gridLayout_2->addWidget(loadNewProgram, 0, 5, 1, 1);
+
+
+        gridLayout->addWidget(frame_11, 3, 0, 1, 4);
+
+        frame_14 = new QFrame(centralwidget);
+        frame_14->setObjectName("frame_14");
+        frame_14->setStyleSheet(QString::fromUtf8("QFrame {\n"
+"	background-color: rgb(18, 20, 32);\n"
+"}\n"
+"\n"
+"QTextEdit{\n"
+"border: 2px solid rgb(224, 225, 221);\n"
+"color:#000;\n"
+"}\n"
+"QLabel{\n"
+"border:none;\n"
+"}"));
+        frame_14->setFrameShape(QFrame::Shape::StyledPanel);
+        frame_14->setFrameShadow(QFrame::Shadow::Raised);
+        gridLayout_17 = new QGridLayout(frame_14);
+        gridLayout_17->setObjectName("gridLayout_17");
+        frame_7 = new QFrame(frame_14);
+        frame_7->setObjectName("frame_7");
+        frame_7->setStyleSheet(QString::fromUtf8("QFrame {\n"
+"	background-color: rgb(18, 20, 32);\n"
+"}\n"
+"\n"
+"QTextEdit{\n"
+"border: 2px solid rgb(224, 225, 221);\n"
+"color:#000;\n"
+"}\n"
+"QLabel{\n"
+"border:none;\n"
+"}"));
+        gridLayout_14 = new QGridLayout(frame_7);
+        gridLayout_14->setObjectName("gridLayout_14");
+        outputScreen = new QTextBrowser(frame_7);
+        outputScreen->setObjectName("outputScreen");
+        outputScreen->setFont(font);
+        outputScreen->setStyleSheet(QString::fromUtf8("background-color: rgb(27, 38, 59);\n"
+"color: rgb(224, 225, 221);"));
+
+        gridLayout_14->addWidget(outputScreen, 2, 0, 1, 1);
+
+        label_4 = new QLabel(frame_7);
+        label_4->setObjectName("label_4");
+        label_4->setMaximumSize(QSize(16777215, 35));
+        QFont font1;
+        font1.setPointSize(20);
+        font1.setBold(true);
+        label_4->setFont(font1);
+        label_4->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        gridLayout_14->addWidget(label_4, 1, 0, 1, 1);
+
+
+        gridLayout_17->addWidget(frame_7, 0, 2, 1, 1);
+
+        widget_12 = new QWidget(frame_14);
+        widget_12->setObjectName("widget_12");
+        widget_12->setStyleSheet(QString::fromUtf8("QFrame {\n"
+"	background-color: rgb(18, 20, 32);\n"
+"}\n"
+"\n"
+"QTextEdit{\n"
+"border: 2px solid rgb(224, 225, 221);\n"
+"color:#000;\n"
+"}\n"
+"QLabel{\n"
+"border:none;\n"
+"}"));
+        gridLayout_16 = new QGridLayout(widget_12);
+        gridLayout_16->setObjectName("gridLayout_16");
+        frame_12 = new QFrame(widget_12);
+        frame_12->setObjectName("frame_12");
+        frame_12->setStyleSheet(QString::fromUtf8("QFrame {\n"
+"    border: 2px solid rgb(255, 255, 255);\n"
+"    background-color: rgb(27, 38, 59);\n"
+"    color: rgb(224, 225, 221);\n"
+"}\n"
+""));
+        frame_12->setFrameShape(QFrame::Shape::StyledPanel);
+        frame_12->setFrameShadow(QFrame::Shadow::Raised);
+        gridLayout_18 = new QGridLayout(frame_12);
+        gridLayout_18->setObjectName("gridLayout_18");
+        displayConter = new QTextBrowser(frame_12);
+        displayConter->setObjectName("displayConter");
+        displayConter->setFont(font);
+        displayConter->setStyleSheet(QString::fromUtf8("border:1px  solid gray;"));
+
+        gridLayout_18->addWidget(displayConter, 0, 0, 1, 1);
+
+        counter = new QSpinBox(frame_12);
+        counter->setObjectName("counter");
+        QFont font2;
+        font2.setPointSize(10);
+        font2.setBold(false);
+        counter->setFont(font2);
+        counter->setStyleSheet(QString::fromUtf8("background-color:rgb(18, 20, 32);\n"
+"color:#fff;\n"
+"border:1px solid gray;"));
+
+        gridLayout_18->addWidget(counter, 1, 0, 1, 1);
+
+
+        gridLayout_16->addWidget(frame_12, 3, 0, 2, 1);
+
+        label_5 = new QLabel(widget_12);
+        label_5->setObjectName("label_5");
+        label_5->setMaximumSize(QSize(16777215, 35));
+        label_5->setFont(font1);
+        label_5->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        gridLayout_16->addWidget(label_5, 0, 0, 1, 1);
+
+
+        gridLayout_17->addWidget(widget_12, 0, 1, 1, 1);
+
+
+        gridLayout->addWidget(frame_14, 1, 2, 1, 2);
+
+        frame_13 = new QFrame(centralwidget);
+        frame_13->setObjectName("frame_13");
+        frame_13->setStyleSheet(QString::fromUtf8("QFrame {\n"
+"	background-color: rgb(18, 20, 32);\n"
+"}\n"
+"\n"
+"QTextEdit{\n"
+"border: 2px solid rgb(224, 225, 221);\n"
+"color:#000;\n"
+"}\n"
+"QLabel{\n"
+"border:none;\n"
+"}"));
+        frame_13->setFrameShape(QFrame::Shape::StyledPanel);
+        frame_13->setFrameShadow(QFrame::Shadow::Raised);
+        gridLayout_15 = new QGridLayout(frame_13);
+        gridLayout_15->setObjectName("gridLayout_15");
+        frame_10 = new QFrame(frame_13);
+        frame_10->setObjectName("frame_10");
+        frame_10->setMaximumSize(QSize(16777215, 16777215));
+        frame_10->setStyleSheet(QString::fromUtf8("QFrame {\n"
+"	background-color: rgb(18, 20, 32);\n"
+"}\n"
+"\n"
+"QTextEdit{\n"
+"border: 2px solid rgb(224, 225, 221);\n"
+"color:#000;\n"
+"}\n"
+"QLabel{\n"
+"border:none;\n"
+"}"));
+        gridLayout_12 = new QGridLayout(frame_10);
+        gridLayout_12->setObjectName("gridLayout_12");
+        label_3 = new QLabel(frame_10);
+        label_3->setObjectName("label_3");
+        label_3->setFont(font1);
+        label_3->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        gridLayout_12->addWidget(label_3, 0, 0, 1, 1);
+
+        inputInstructions = new QTextEdit(frame_10);
+        inputInstructions->setObjectName("inputInstructions");
+        inputInstructions->setFont(font);
+        inputInstructions->viewport()->setProperty("cursor", QVariant(QCursor(Qt::CursorShape::IBeamCursor)));
+        inputInstructions->setStyleSheet(QString::fromUtf8("background-color: rgb(27, 38, 59);\n"
+"color: rgb(224, 225, 221);"));
+
+        gridLayout_12->addWidget(inputInstructions, 1, 0, 1, 1);
+
+
+        gridLayout_15->addWidget(frame_10, 0, 0, 2, 1);
+
+        frame_8 = new QFrame(frame_13);
+        frame_8->setObjectName("frame_8");
+        frame_8->setStyleSheet(QString::fromUtf8("QFrame {\n"
+"	background-color: rgb(18, 20, 32);\n"
+"}\n"
+"\n"
+"QTextEdit{\n"
+"border: 2px solid rgb(224, 225, 221);\n"
+"color:#000;\n"
+"}\n"
+"QLabel{\n"
+"border:none;\n"
+"}"));
+        gridLayout_13 = new QGridLayout(frame_8);
+        gridLayout_13->setObjectName("gridLayout_13");
+        currentInstruction = new QTextBrowser(frame_8);
+        currentInstruction->setObjectName("currentInstruction");
+        currentInstruction->setFont(font);
+        currentInstruction->setStyleSheet(QString::fromUtf8("background-color: rgb(27, 38, 59);\n"
+"color: rgb(224, 225, 221);"));
+
+        gridLayout_13->addWidget(currentInstruction, 1, 0, 1, 1);
+
+        label_7 = new QLabel(frame_8);
+        label_7->setObjectName("label_7");
+        label_7->setMaximumSize(QSize(16777215, 35));
+        label_7->setFont(font1);
+        label_7->setAlignment(Qt::AlignmentFlag::AlignCenter);
+
+        gridLayout_13->addWidget(label_7, 0, 0, 1, 1);
+
+
+        gridLayout_15->addWidget(frame_8, 0, 1, 2, 1);
+
+
+        gridLayout->addWidget(frame_13, 1, 0, 1, 2);
+
         label = new QLabel(centralwidget);
         label->setObjectName("label");
         label->setMaximumSize(QSize(16777215, 60));
-        QFont font;
-        font.setPointSize(30);
-        font.setBold(true);
-        label->setFont(font);
+        QFont font3;
+        font3.setPointSize(30);
+        font3.setBold(true);
+        label->setFont(font3);
         label->setStyleSheet(QString::fromUtf8("QLabel{\n"
 "	color: rgb(224, 225, 221);\n"
 "	background-color: rgb(18, 20, 32);\n"
 "}"));
         label->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
-        gridLayout->addWidget(label, 0, 0, 1, 6);
+        gridLayout->addWidget(label, 0, 0, 1, 4);
 
         Register = new QFrame(centralwidget);
         Register->setObjectName("Register");
@@ -440,9 +840,6 @@ public:
         label_78 = new QLabel(Register);
         label_78->setObjectName("label_78");
         label_78->setMaximumSize(QSize(16777215, 36));
-        QFont font1;
-        font1.setPointSize(20);
-        font1.setBold(true);
         label_78->setFont(font1);
         label_78->setStyleSheet(QString::fromUtf8("color: rgb(224, 225, 221);"));
         label_78->setAlignment(Qt::AlignmentFlag::AlignCenter);
@@ -721,93 +1118,93 @@ public:
         gridLayout_4->setObjectName("gridLayout_4");
         x2 = new QLabel(frame_2);
         x2->setObjectName("x2");
-        QFont font2;
-        font2.setBold(true);
-        x2->setFont(font2);
+        QFont font4;
+        font4.setBold(true);
+        x2->setFont(font4);
 
         gridLayout_4->addWidget(x2, 2, 0, 1, 1);
 
         x6 = new QLabel(frame_2);
         x6->setObjectName("x6");
-        x6->setFont(font2);
+        x6->setFont(font4);
 
         gridLayout_4->addWidget(x6, 6, 0, 1, 1);
 
         x8 = new QLabel(frame_2);
         x8->setObjectName("x8");
-        x8->setFont(font2);
+        x8->setFont(font4);
 
         gridLayout_4->addWidget(x8, 8, 0, 1, 1);
 
         xb = new QLabel(frame_2);
         xb->setObjectName("xb");
-        xb->setFont(font2);
+        xb->setFont(font4);
 
         gridLayout_4->addWidget(xb, 11, 0, 1, 1);
 
         x4 = new QLabel(frame_2);
         x4->setObjectName("x4");
-        x4->setFont(font2);
+        x4->setFont(font4);
 
         gridLayout_4->addWidget(x4, 4, 0, 1, 1);
 
         xf = new QLabel(frame_2);
         xf->setObjectName("xf");
-        xf->setFont(font2);
+        xf->setFont(font4);
 
         gridLayout_4->addWidget(xf, 15, 0, 1, 1);
 
         x5 = new QLabel(frame_2);
         x5->setObjectName("x5");
-        x5->setFont(font2);
+        x5->setFont(font4);
 
         gridLayout_4->addWidget(x5, 5, 0, 1, 1);
 
         xe = new QLabel(frame_2);
         xe->setObjectName("xe");
-        xe->setFont(font2);
+        xe->setFont(font4);
 
         gridLayout_4->addWidget(xe, 14, 0, 1, 1);
 
         x1 = new QLabel(frame_2);
         x1->setObjectName("x1");
-        x1->setFont(font2);
+        x1->setFont(font4);
 
         gridLayout_4->addWidget(x1, 1, 0, 1, 1);
 
         xd = new QLabel(frame_2);
         xd->setObjectName("xd");
-        xd->setFont(font2);
+        xd->setFont(font4);
 
         gridLayout_4->addWidget(xd, 13, 0, 1, 1);
 
         xa = new QLabel(frame_2);
         xa->setObjectName("xa");
-        xa->setFont(font2);
+        xa->setFont(font4);
 
         gridLayout_4->addWidget(xa, 10, 0, 1, 1);
 
         x9 = new QLabel(frame_2);
         x9->setObjectName("x9");
-        x9->setFont(font2);
+        x9->setFont(font4);
 
         gridLayout_4->addWidget(x9, 9, 0, 1, 1);
 
         x7 = new QLabel(frame_2);
         x7->setObjectName("x7");
-        x7->setFont(font2);
+        x7->setFont(font4);
 
         gridLayout_4->addWidget(x7, 7, 0, 1, 1);
 
         xc = new QLabel(frame_2);
         xc->setObjectName("xc");
-        xc->setFont(font2);
+        xc->setFont(font4);
 
         gridLayout_4->addWidget(xc, 12, 0, 1, 1);
 
         x3 = new QLabel(frame_2);
         x3->setObjectName("x3");
-        x3->setFont(font2);
+        x3->setFont(font4);
 
         gridLayout_4->addWidget(x3, 3, 0, 1, 1);
 
@@ -841,94 +1238,94 @@ public:
         gridLayout_5->setObjectName("gridLayout_5");
         y3 = new QLabel(frame_3);
         y3->setObjectName("y3");
-        y3->setFont(font2);
+        y3->setFont(font4);
         y3->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
         gridLayout_5->addWidget(y3, 0, 4, 1, 1);
 
         ya = new QLabel(frame_3);
         ya->setObjectName("ya");
-        ya->setFont(font2);
+        ya->setFont(font4);
 
         gridLayout_5->addWidget(ya, 0, 11, 1, 1);
 
         y4 = new QLabel(frame_3);
         y4->setObjectName("y4");
-        y4->setFont(font2);
+        y4->setFont(font4);
 
         gridLayout_5->addWidget(y4, 0, 5, 1, 1);
 
         y1 = new QLabel(frame_3);
         y1->setObjectName("y1");
-        y1->setFont(font2);
+        y1->setFont(font4);
         y1->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
         gridLayout_5->addWidget(y1, 0, 2, 1, 1);
 
         yb = new QLabel(frame_3);
         yb->setObjectName("yb");
-        yb->setFont(font2);
+        yb->setFont(font4);
 
         gridLayout_5->addWidget(yb, 0, 12, 1, 1);
 
         y8 = new QLabel(frame_3);
         y8->setObjectName("y8");
-        y8->setFont(font2);
+        y8->setFont(font4);
 
         gridLayout_5->addWidget(y8, 0, 9, 1, 1);
 
         y6 = new QLabel(frame_3);
         y6->setObjectName("y6");
-        y6->setFont(font2);
+        y6->setFont(font4);
 
         gridLayout_5->addWidget(y6, 0, 7, 1, 1);
 
         yf = new QLabel(frame_3);
         yf->setObjectName("yf");
-        yf->setFont(font2);
+        yf->setFont(font4);
 
         gridLayout_5->addWidget(yf, 0, 16, 1, 1);
 
         yc = new QLabel(frame_3);
         yc->setObjectName("yc");
-        yc->setFont(font2);
+        yc->setFont(font4);
 
         gridLayout_5->addWidget(yc, 0, 13, 1, 1);
 
         y9 = new QLabel(frame_3);
         y9->setObjectName("y9");
-        y9->setFont(font2);
+        y9->setFont(font4);
 
         gridLayout_5->addWidget(y9, 0, 10, 1, 1);
 
         ye = new QLabel(frame_3);
         ye->setObjectName("ye");
-        ye->setFont(font2);
+        ye->setFont(font4);
 
         gridLayout_5->addWidget(ye, 0, 15, 1, 1);
 
         y2 = new QLabel(frame_3);
         y2->setObjectName("y2");
-        y2->setFont(font2);
+        y2->setFont(font4);
         y2->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
         gridLayout_5->addWidget(y2, 0, 3, 1, 1);
 
         y5 = new QLabel(frame_3);
         y5->setObjectName("y5");
-        y5->setFont(font2);
+        y5->setFont(font4);
 
         gridLayout_5->addWidget(y5, 0, 6, 1, 1);
 
         y7 = new QLabel(frame_3);
         y7->setObjectName("y7");
-        y7->setFont(font2);
+        y7->setFont(font4);
 
         gridLayout_5->addWidget(y7, 0, 8, 1, 1);
 
         yd = new QLabel(frame_3);
         yd->setObjectName("yd");
-        yd->setFont(font2);
+        yd->setFont(font4);
 
         gridLayout_5->addWidget(yd, 0, 14, 1, 1);
 
@@ -2279,268 +2676,7 @@ public:
         gridLayout_3->addWidget(frame, 3, 0, 1, 1);
 
 
-        gridLayout->addWidget(Memory, 2, 1, 1, 5);
-
-        frame_7 = new QFrame(centralwidget);
-        frame_7->setObjectName("frame_7");
-        frame_7->setStyleSheet(QString::fromUtf8("QFrame {\n"
-"	background-color: rgb(18, 20, 32);\n"
-"}\n"
-"\n"
-"QTextEdit{\n"
-"border: 2px solid rgb(224, 225, 221);\n"
-"color:#000;\n"
-"}\n"
-"QLabel{\n"
-"border:none;\n"
-"}"));
-        gridLayout_14 = new QGridLayout(frame_7);
-        gridLayout_14->setObjectName("gridLayout_14");
-        label_4 = new QLabel(frame_7);
-        label_4->setObjectName("label_4");
-        label_4->setMaximumSize(QSize(16777215, 35));
-        label_4->setFont(font1);
-        label_4->setAlignment(Qt::AlignmentFlag::AlignCenter);
-
-        gridLayout_14->addWidget(label_4, 0, 0, 1, 1);
-
-        outputScreen = new QTextBrowser(frame_7);
-        outputScreen->setObjectName("outputScreen");
-        QFont font3;
-        font3.setPointSize(15);
-        font3.setBold(true);
-        outputScreen->setFont(font3);
-        outputScreen->setStyleSheet(QString::fromUtf8("background-color: rgb(27, 38, 59);\n"
-"color: rgb(224, 225, 221);"));
-
-        gridLayout_14->addWidget(outputScreen, 1, 0, 1, 1);
-
-
-        gridLayout->addWidget(frame_7, 1, 4, 1, 2);
-
-        frame_10 = new QFrame(centralwidget);
-        frame_10->setObjectName("frame_10");
-        frame_10->setMaximumSize(QSize(16777215, 16777215));
-        frame_10->setStyleSheet(QString::fromUtf8("QFrame {\n"
-"	background-color: rgb(18, 20, 32);\n"
-"}\n"
-"\n"
-"QTextEdit{\n"
-"border: 2px solid rgb(224, 225, 221);\n"
-"color:#000;\n"
-"}\n"
-"QLabel{\n"
-"border:none;\n"
-"}"));
-        gridLayout_12 = new QGridLayout(frame_10);
-        gridLayout_12->setObjectName("gridLayout_12");
-        label_3 = new QLabel(frame_10);
-        label_3->setObjectName("label_3");
-        label_3->setFont(font1);
-        label_3->setAlignment(Qt::AlignmentFlag::AlignCenter);
-
-        gridLayout_12->addWidget(label_3, 0, 0, 1, 1);
-
-        inputInstructions = new QTextEdit(frame_10);
-        inputInstructions->setObjectName("inputInstructions");
-        inputInstructions->setFont(font3);
-        inputInstructions->viewport()->setProperty("cursor", QVariant(QCursor(Qt::CursorShape::IBeamCursor)));
-        inputInstructions->setStyleSheet(QString::fromUtf8("background-color: rgb(27, 38, 59);\n"
-"color: rgb(224, 225, 221);"));
-
-        gridLayout_12->addWidget(inputInstructions, 1, 0, 1, 1);
-
-
-        gridLayout->addWidget(frame_10, 1, 0, 1, 2);
-
-        frame_8 = new QFrame(centralwidget);
-        frame_8->setObjectName("frame_8");
-        frame_8->setStyleSheet(QString::fromUtf8("QFrame {\n"
-"	background-color: rgb(18, 20, 32);\n"
-"}\n"
-"\n"
-"QTextEdit{\n"
-"border: 2px solid rgb(224, 225, 221);\n"
-"color:#000;\n"
-"}\n"
-"QLabel{\n"
-"border:none;\n"
-"}"));
-        gridLayout_13 = new QGridLayout(frame_8);
-        gridLayout_13->setObjectName("gridLayout_13");
-        label_7 = new QLabel(frame_8);
-        label_7->setObjectName("label_7");
-        label_7->setMaximumSize(QSize(16777215, 35));
-        label_7->setFont(font1);
-        label_7->setAlignment(Qt::AlignmentFlag::AlignCenter);
-
-        gridLayout_13->addWidget(label_7, 0, 0, 1, 1);
-
-        currentInstruction = new QTextBrowser(frame_8);
-        currentInstruction->setObjectName("currentInstruction");
-        currentInstruction->setFont(font3);
-        currentInstruction->setStyleSheet(QString::fromUtf8("background-color: rgb(27, 38, 59);\n"
-"color: rgb(224, 225, 221);"));
-
-        gridLayout_13->addWidget(currentInstruction, 1, 0, 1, 1);
-
-
-        gridLayout->addWidget(frame_8, 1, 2, 1, 2);
-
-        frame_11 = new QFrame(centralwidget);
-        frame_11->setObjectName("frame_11");
-        frame_11->setMaximumSize(QSize(16777215, 70));
-        frame_11->setStyleSheet(QString::fromUtf8("QFrame{	\n"
-"	background-color: rgb(18, 20, 32);\n"
-"}"));
-        gridLayout_2 = new QGridLayout(frame_11);
-        gridLayout_2->setObjectName("gridLayout_2");
-        gridLayout_2->setHorizontalSpacing(10);
-        gridLayout_2->setVerticalSpacing(0);
-        gridLayout_2->setContentsMargins(300, 0, 300, 0);
-        help = new QPushButton(frame_11);
-        help->setObjectName("help");
-        help->setMinimumSize(QSize(0, 50));
-        help->setFont(font3);
-        help->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
-        help->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"	background-color: rgb(65, 90, 119);\n"
-"	color: rgb(224, 225, 221);\n"
-"    border-radius: 10px;\n"
-"    padding: 0 2.5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"	background-color: rgb(119, 141, 169);\n"
-"	color: rgb(224, 225, 221);\n"
-"}\n"
-"\n"
-"QPushButton:disabled {\n"
-"	background-color: rgb(27, 38, 59);\n"
-"	color: rgb(224, 225, 221);\n"
-"}"));
-
-        gridLayout_2->addWidget(help, 0, 0, 1, 1);
-
-        loadInput = new QPushButton(frame_11);
-        loadInput->setObjectName("loadInput");
-        loadInput->setMinimumSize(QSize(0, 50));
-        loadInput->setFont(font3);
-        loadInput->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
-        loadInput->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"	background-color: rgb(65, 90, 119);\n"
-"	color: rgb(224, 225, 221);\n"
-"    border-radius: 10px;\n"
-"    padding: 0 2.5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"	background-color: rgb(119, 141, 169);\n"
-"	color: rgb(224, 225, 221);\n"
-"}\n"
-"\n"
-"QPushButton:disabled {\n"
-"	background-color: rgb(27, 38, 59);\n"
-"	color: rgb(224, 225, 221);\n"
-"}"));
-
-        gridLayout_2->addWidget(loadInput, 0, 1, 1, 1);
-
-        runStep = new QPushButton(frame_11);
-        runStep->setObjectName("runStep");
-        runStep->setMinimumSize(QSize(0, 50));
-        runStep->setFont(font3);
-        runStep->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
-        runStep->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"	background-color: rgb(65, 90, 119);\n"
-"	color: rgb(224, 225, 221);\n"
-"    border-radius: 10px;\n"
-"    padding: 0 2.5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"	background-color: rgb(119, 141, 169);\n"
-"	color: rgb(224, 225, 221);\n"
-"}\n"
-"\n"
-"QPushButton:disabled {\n"
-"	background-color: rgb(27, 38, 59);\n"
-"	color: rgb(224, 225, 221);\n"
-"}"));
-
-        gridLayout_2->addWidget(runStep, 0, 3, 1, 1);
-
-        clear = new QPushButton(frame_11);
-        clear->setObjectName("clear");
-        clear->setMinimumSize(QSize(0, 50));
-        clear->setMaximumSize(QSize(16777215, 16777215));
-        clear->setFont(font3);
-        clear->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
-        clear->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"	background-color: rgb(65, 90, 119);\n"
-"	color: rgb(224, 225, 221);\n"
-"    border-radius: 10px;\n"
-"    padding: 0 2.5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"	\n"
-"	background-color: rgb(200, 64, 64);\n"
-"	color: rgb(224, 225, 221);\n"
-"}"));
-
-        gridLayout_2->addWidget(clear, 0, 5, 1, 1);
-
-        runAll = new QPushButton(frame_11);
-        runAll->setObjectName("runAll");
-        runAll->setMinimumSize(QSize(0, 50));
-        runAll->setFont(font3);
-        runAll->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
-        runAll->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"	background-color: rgb(65, 90, 119);\n"
-"	color: rgb(224, 225, 221);\n"
-"    border-radius: 10px;\n"
-"    padding: 0 2.5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"	background-color: rgb(119, 141, 169);\n"
-"	color: rgb(224, 225, 221);\n"
-"}\n"
-"\n"
-"QPushButton:disabled {\n"
-"	background-color: rgb(27, 38, 59);\n"
-"	color: rgb(224, 225, 221);\n"
-"}"));
-
-        gridLayout_2->addWidget(runAll, 0, 4, 1, 1);
-
-        loadFile = new QPushButton(frame_11);
-        loadFile->setObjectName("loadFile");
-        loadFile->setMinimumSize(QSize(0, 50));
-        loadFile->setFont(font3);
-        loadFile->setCursor(QCursor(Qt::CursorShape::PointingHandCursor));
-        loadFile->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"	background-color: rgb(65, 90, 119);\n"
-"	color: rgb(224, 225, 221);\n"
-"    border-radius: 10px;\n"
-"    padding: 0 2.5px;\n"
-"}\n"
-"\n"
-"QPushButton:hover {\n"
-"	background-color: rgb(119, 141, 169);\n"
-"	color: rgb(224, 225, 221);\n"
-"}\n"
-"\n"
-"QPushButton:disabled {\n"
-"	background-color: rgb(27, 38, 59);\n"
-"	color: rgb(224, 225, 221);\n"
-"}"));
-
-        gridLayout_2->addWidget(loadFile, 0, 2, 1, 1);
-
-
-        gridLayout->addWidget(frame_11, 3, 0, 1, 6);
+        gridLayout->addWidget(Memory, 2, 1, 1, 3);
 
         MainWindow->setCentralWidget(centralwidget);
 
@@ -2552,6 +2688,33 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Vole Machine Language Simulator", nullptr));
+        runStep->setText(QCoreApplication::translate("MainWindow", "Run Step", nullptr));
+        loadFile->setText(QCoreApplication::translate("MainWindow", "Load File", nullptr));
+        loadInput->setText(QCoreApplication::translate("MainWindow", "Load Input", nullptr));
+        clear->setText(QCoreApplication::translate("MainWindow", "Clear / Stop", nullptr));
+        help->setText(QCoreApplication::translate("MainWindow", "Help", nullptr));
+        runAll->setText(QCoreApplication::translate("MainWindow", "Run All", nullptr));
+        loadNewProgram->setText(QCoreApplication::translate("MainWindow", "Load New Program", nullptr));
+        outputScreen->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Segoe UI'; font-size:15pt; font-weight:700; font-style:normal;\">\n"
+"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", nullptr));
+        label_4->setText(QCoreApplication::translate("MainWindow", "Output Screen", nullptr));
+        label_5->setText(QCoreApplication::translate("MainWindow", "Program Counter", nullptr));
+        label_3->setText(QCoreApplication::translate("MainWindow", "Input Instructions", nullptr));
+        currentInstruction->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Segoe UI'; font-size:15pt; font-weight:700; font-style:normal;\">\n"
+"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", nullptr));
+        label_7->setText(QCoreApplication::translate("MainWindow", "Current instruction", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Vole Machine Language Simulator", nullptr));
         label_78->setText(QCoreApplication::translate("MainWindow", "Register", nullptr));
         label_91->setText(QCoreApplication::translate("MainWindow", "RC", nullptr));
@@ -2875,31 +3038,6 @@ public:
         x35->setText(QCoreApplication::translate("MainWindow", "00", nullptr));
         x33->setText(QCoreApplication::translate("MainWindow", "00", nullptr));
         x23->setText(QCoreApplication::translate("MainWindow", "00", nullptr));
-        label_4->setText(QCoreApplication::translate("MainWindow", "Output Screen", nullptr));
-        outputScreen->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"hr { height: 1px; border-width: 0; }\n"
-"li.unchecked::marker { content: \"\\2610\"; }\n"
-"li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'Segoe UI'; font-size:15pt; font-weight:700; font-style:normal;\">\n"
-"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", nullptr));
-        label_3->setText(QCoreApplication::translate("MainWindow", "Input Instructions", nullptr));
-        label_7->setText(QCoreApplication::translate("MainWindow", "Current instruction", nullptr));
-        currentInstruction->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"hr { height: 1px; border-width: 0; }\n"
-"li.unchecked::marker { content: \"\\2610\"; }\n"
-"li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'Segoe UI'; font-size:15pt; font-weight:700; font-style:normal;\">\n"
-"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>", nullptr));
-        help->setText(QCoreApplication::translate("MainWindow", "Help", nullptr));
-        loadInput->setText(QCoreApplication::translate("MainWindow", "Load Input", nullptr));
-        runStep->setText(QCoreApplication::translate("MainWindow", "Run Step", nullptr));
-        clear->setText(QCoreApplication::translate("MainWindow", "Clear / Stop", nullptr));
-        runAll->setText(QCoreApplication::translate("MainWindow", "Run All", nullptr));
-        loadFile->setText(QCoreApplication::translate("MainWindow", "Load File", nullptr));
     } // retranslateUi
 
 };
