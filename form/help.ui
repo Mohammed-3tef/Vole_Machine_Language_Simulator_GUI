@@ -71,8 +71,8 @@ QLabel {
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>776</width>
-         <height>520</height>
+         <width>780</width>
+         <height>536</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout_2">
@@ -92,8 +92,11 @@ li.checked::marker { content: &quot;\2612&quot;; }
 &lt;h1 align=&quot;center&quot; style=&quot; margin-top:18px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:xx-large; font-weight:700;&quot;&gt;Vole Machine Language Simulator &lt;/span&gt;&lt;/h1&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;The Vole Machine Simulator emulates machine language execution, providing an educational platform to explore low-level programming, machine instructions, and how computers process commands at a fundamental level. &lt;/p&gt;
 &lt;h2 align=&quot;center&quot; style=&quot; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:x-large; font-weight:700;&quot;&gt;How to run &lt;/span&gt;&lt;/h2&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Firstly, you can write instructions in (input instructions) then click on (Load Input) OR click on (Load File) to load a text file from your PC. &lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Secondly, you can click on (Run Step) to make the program runs the instructions one by one OR click on (Run All) to to make the program runs all the instructions. &lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Firstly, you can declare program counter. &lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;  Secondly, you can write instructions in (input instructions) then click on (Load Input) OR click on (Load File) to load a text file from your PC. &lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Thirdly, you can click on (Run Step) to make the program runs the instructions one by one OR click on (Run All) to to make the program runs all the instructions. &lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Fourthly, you can click on (Load New Program) to load new program. &lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Fifthly, you can click on (Clear / Stop) to clear the whole program. &lt;/p&gt;
 &lt;h2 align=&quot;center&quot; style=&quot; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:x-large; font-weight:700;&quot;&gt;Instructions &lt;/span&gt;&lt;/h2&gt;
 &lt;table border=&quot;1&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;&quot; cellspacing=&quot;2&quot; cellpadding=&quot;0&quot;&gt;
 &lt;tr&gt;

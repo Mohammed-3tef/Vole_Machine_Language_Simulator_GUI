@@ -26,7 +26,13 @@ QFrame {
 
 QLabel {
 	color : rgb(224, 225, 221);
-}</string>
+}
+
+QMessageBox QLabel   {
+	background-color: transparent;
+	color: black;
+}
+</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
