@@ -406,7 +406,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(1438, 1072);
+        MainWindow->resize(1442, 1101);
         MainWindow->setStyleSheet(QString::fromUtf8("QMainWindow {\n"
 "	background-color: rgb(18, 20, 32);\n"
 "	color : rgb(224, 225, 221);\n"
@@ -419,7 +419,13 @@ public:
 "\n"
 "QLabel {\n"
 "	color : rgb(224, 225, 221);\n"
-"}"));
+"}\n"
+"\n"
+"QMessageBox QLabel   {\n"
+"	background-color: transparent;\n"
+"	color: black;\n"
+"}\n"
+""));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         gridLayout = new QGridLayout(centralwidget);

@@ -6,7 +6,7 @@
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../../help.h"
+#include "../../../include/help.h"
 #include <QtCore/qmetatype.h>
 
 #include <QtCore/qtmochelpers.h>
