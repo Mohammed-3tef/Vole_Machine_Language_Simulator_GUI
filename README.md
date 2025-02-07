@@ -5,7 +5,7 @@
 - [📌 Introduction](#-introduction)
 - [🚀 Features](#-features)
 - [⚙️ Vole Machine Language Instruction Set](#️-vole-machine-language-instruction-set)
-- [🖼️ Screenshots](#️-screenshots)
+- [🖥️ Watch the Demo](#️-watch-the-demo)
 - [🛠️ Getting Started](#️-getting-started)
   - [📋 Prerequisites](#-prerequisites)
   - [📥 Installation](#-installation)
@@ -48,9 +48,9 @@ The Vole Machine Language Simulator GUI is a graphical application designed to s
 | D      | RXY    | **JUMP** to instruction in RAM cell XY if the content of register R is greater than (>) the content of register 0. Data is interpreted as integers in two's complement notation. |
 
 
-## 🖼️ Screenshots
+## 🖥️ Watch the Demo
 
-<img src="./img/VMLS.png" alt="Vole Machine Language Simulator GUI Screenshot">
+https://github.com/user-attachments/assets/de005b7d-8562-4431-939a-a5e8af3c7bb1
 
 
 ## 🛠️ Getting Started
