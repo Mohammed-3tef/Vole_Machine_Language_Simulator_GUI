@@ -1,7 +1,7 @@
 <h1>
   Vole Machine Language Simulator GUI
   <div > 
-    <a href="https://deepwiki.com/esraa-emary/Vole-Machine-Language-Simulator-GUI"> 
+    <a href="https://deepwiki.com/esraa-emary/Vole-Machine-Language-Simulator-GUI" target="_blank"> 
       <img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"> 
     </a> 
   </div>
