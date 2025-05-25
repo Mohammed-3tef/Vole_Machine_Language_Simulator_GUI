@@ -1,4 +1,11 @@
-# Vole Machine Language Simulator GUI
+<h1>
+  Vole Machine Language Simulator GUI
+  <div > 
+    <a href="https://deepwiki.com/esraa-emary/Vole-Machine-Language-Simulator-GUI"> 
+      <img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"> 
+    </a> 
+  </div>
+</h1> 
 
 ## Table of Contents
 
